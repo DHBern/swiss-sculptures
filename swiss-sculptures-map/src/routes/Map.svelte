@@ -6,6 +6,10 @@
 
   /** @type {string | number | undefined} */
   let popup_id;
+
+  /**
+   * @type boolean
+   */
   export let showLeft = false;
   export let showRight = false;
 
@@ -16,9 +20,30 @@
   let hoveredLineId = null;
 
   // Calculate the width and left values based on the presence of the left and right pop-ups
-  $: mapWidth = showLeft && showRight ? 'calc(100% - 1000px)' : showLeft || showRight ? 'calc(100% - 520px)' : '100%';
-  $: mapLeft = showLeft ? '520px' : '0';
+  $: mapWidth = showLeft && showRight ? 'calc(100% - 1000px)' : showLeft || showRight ? 'calc(100% - 500px)' : '100%';
+  $: mapLeft = showLeft ? '500px' : '0';
 
+  // Function to handle the custom event
+
+  /**
+	 * @param {{ detail: any; }} event
+	 */
+  function handleCloseL(event) {
+        // Retrieve the value of showLeft from the event
+        const  sl  = event.detail;
+        showLeft = sl;
+
+    }
+
+      /**
+	 * @param {{ detail: any; }} event
+	 */
+  function handleCloseR(event) {
+        // Retrieve the value of showLeft from the event
+        const  sr  = event.detail;
+        showRight = sr;
+
+    }
 
   onMount(() => {
     const map = new maplibregl.Map({
@@ -83,6 +108,16 @@
           const clickedFeature = features[0];
           const id = clickedFeature.id;
           popup_id = id;
+
+          // Open Popups
+          if(clickedFeature.properties.period == 'new'){
+            showLeft = false;
+            showRight = true;
+          }else if(clickedFeature.properties.period == 'old'){
+            showRight = false;
+            showLeft = true;
+          }
+          // Draw line and zoom
           const sculpture = clickedFeature.properties.sculpture_name;
           if (id !== undefined ){
             map.once('render', () => {
@@ -119,11 +154,52 @@
         }
       
       });
+      map.on('click', 'lines', async (e) => {
+        const features = map.queryRenderedFeatures(e.point, { layers: ['lines'] });
+        if (features.length) {
+          const clickedFeature = features[0];
+          const id = clickedFeature.id;
+          popup_id = id;
 
+          // Toggle both left and right popups
+          showLeft = true;
+          showRight = true;
+
+          // Toggle line color between original and highlighted
+          const isHighlighted = map.getFeatureState({ source: 'sculptures', id: clickedFeature.id }).hover;
+          map.setFeatureState(
+            { source: 'sculptures', id: clickedFeature.id },
+            { hover: !isHighlighted }
+          );
+
+          // Panning feature
+          const coor = await queryCoordinates(id);
+          const padding = { top: 50, bottom: 50, left: 50, right: 50 };
+          map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
+        }
+      });
+
+      // const popup = new maplibregl.Popup({
+      //       closeButton: false,
+      //       closeOnClick: false,
+      //   });
       map.on('mouseenter', 'points', (e) => {
         map.getCanvas().style.cursor = 'pointer';
         if (e.features && e.features.length) {
           hoveredPointId = e.features[0].id;
+
+          const image = JSON.parse(e.features[0].properties.image);
+          const sculpture_name = e.features[0]. properties.sculpture_name;
+
+          // Create the popup HTML content
+          const popupContent = `
+            <div>
+              <img src="${image[0]}" alt="${sculpture_name}" style="position: absolute; overflow: hidden; display: flex;" />
+              </br>
+              <p>${sculpture_name}</p>
+            </div>
+          `;
+
           if (hoveredPointId !== null) {
             map.setFeatureState(
               { source: 'sculptures', id: hoveredPointId },
@@ -135,6 +211,8 @@
             { source: 'sculptures', id: hoveredPointId },
             { hover: true }
           );
+          // popup.setLngLat(e.lngLat).setHTML(popupContent).addTo(map);
+          
         }
       });
 
@@ -147,6 +225,11 @@
           );
         }
         hoveredPointId = null;
+
+        // Remove the popup
+        // if (popup) {
+        //   popup.remove();
+        // }
       });
 
       map.on('mouseenter', 'lines', (e) => {
@@ -180,8 +263,21 @@
   });
 </script>
 
-<div id="map" class="z-0" style="position: absolute; width: {mapWidth}; height: 800px; left: {mapLeft};"></div>
+<style>
+  #map {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 800px;
+  z-index: 100;
+}
 
-<div class="z-10">
-  <Popup {popup_id}/>
+</style>
+
+<div id="map" style="width: {mapWidth}; left: {mapLeft};"></div>
+
+<div>
+  <Popup on:closeL={handleCloseL} on:closeR={handleCloseR} {popup_id} {showLeft} {showRight}/>
 </div>

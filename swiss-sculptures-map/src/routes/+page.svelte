@@ -2,10 +2,11 @@
     import Map from './Map.svelte';
 </script>
 
-<body class="h-screen overflow-hidden">
+<body style="margin: 0; padding: 0;">
 
     <Map />
 
+    <!-- Footer/Legend -->
     <style>
         .grid-container {
             position: absolute;
@@ -16,7 +17,6 @@
             grid-template-columns: auto auto;
             gap: 1rem; 
             padding: 20px; 
-            z-index: 10;
             background-color: #D9D9D9;
         }
 
@@ -39,6 +39,11 @@
             color: #666;
             margin-bottom: 1rem;
             font-size: 36px;
+        }
+
+        h4{
+            font-size: 28px;
+            font-family: Inter;
         }
 
         .l-text {

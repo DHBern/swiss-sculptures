@@ -1,4 +1,5 @@
 export type GeoJSONFeature = {
+  properties: any;
   id: number;
   geometry: {
     type: string;
@@ -22,9 +23,3 @@ export async function queryGeoJSON(id: number): Promise<{ queriedFeatures: GeoJS
       throw error;
   }
 }
-
-
-  // export async function queryGeoJSON(id: number) {
-  //   const queriedFeature = id*2;
-  //   return queriedFeature;
-  // }

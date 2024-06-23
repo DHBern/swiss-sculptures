@@ -5,7 +5,7 @@
 <body style="margin: 0; padding: 0;">
 	<Map />
 
-	<!-- Footer/Legend -->
+	Footer/Legend
 	<style>
 		.grid-container {
 			position: absolute;
@@ -17,7 +17,7 @@
 			gap: 1rem;
 			padding: 20px;
 			background-color: #d9d9d9;
-			z-index: 100;
+			z-index: 10;
 		}
 
 		.col-auto {

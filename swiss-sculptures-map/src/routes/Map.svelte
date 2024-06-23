@@ -1,4 +1,4 @@
-<script>
+<script src="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.js">
 	import { onMount } from 'svelte';
 	import maplibregl from 'maplibre-gl';
 	import Popup from './Popup.svelte';
@@ -32,8 +32,7 @@
 				: '100%';
 	$: mapLeft = showLeft ? '500px' : '0';
 
-	// Function to handle the custom event
-
+	// Functions to handle the custom events
 	/**
 	 * @param {{ detail: any; }} event
 	 */
@@ -107,12 +106,11 @@
 				},
 				filter: ['==', '$type', 'Point']
 			});
-			const popup = new maplibregl.Popup({
+			let popup = new maplibregl.Popup({
 				closeButton: false,
-				closeOnClick: false
-			})
-				.setLngLat([8.49969, 47.395754])
-				.setHTML('<h1>Hello World!</h1>');
+				closeOnClick: false,
+				maxWidth: 'none'
+			});
 
 			map.on('click', 'points', (e) => {
 				const features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
@@ -204,11 +202,11 @@
 
 					// Create the popup HTML content
 					const popupContent = `
-            <div style="background-color: #d9d9d9">
-              <img src="${image[0]}" alt="${sculpture_name}" style="overflow: hidden; display: flex;" />
-              <p>${sculpture_name}</p>
-            </div>
-          `;
+						<div style="background-color: #d9d9d9">
+						<img src="${image[0]}" alt="${sculpture_name}" style="overflow: hidden; display: flex;" />
+						<p>${sculpture_name}</p>
+						</div>
+					`;
 
 					if (hoveredPointId !== null) {
 						map.setFeatureState({ source: 'sculptures', id: hoveredPointId }, { hover: false });
@@ -220,17 +218,11 @@
 						coordinatesArray[0] += e.lngLat.lng > coordinatesArray[0] ? 360 : -360;
 					}
 
-					popup.setLngLat(coordinatesArray).setHTML(popupContent).addTo(map);
-					const bounds = map.getBounds();
-					if (!bounds.contains(popup.getLngLat())) {
-						// Adjust popup position to stay within map bounds
-						// Example: if it's too high or too low, adjust the latitude
-						const newLat = Math.min(
-							Math.max(coordinatesArray[1], bounds.getSouth()),
-							bounds.getNorth()
-						);
-						popup.setLngLat([coordinatesArray[0], newLat]);
-					}
+					popup = new maplibregl.Popup()
+						.setLngLat(coordinatesArray)
+						.setHTML(popupContent)
+						.addTo(map);
+
 					console.log(popup.getLngLat());
 				}
 			});
@@ -243,9 +235,7 @@
 				hoveredPointId = null;
 
 				// Remove the popup
-				if (popup) {
-					popup.remove();
-				}
+				popup.remove();
 			});
 
 			map.on('mouseenter', 'lines', (e) => {
@@ -282,18 +272,11 @@
 	#map-container {
 		position: absolute;
 		overflow: hidden;
-		margin: 0;
-		padding: 0;
-		right: 0;
-		top: 0;
 		height: 800px;
 		z-index: 100;
 	}
 	#map {
 		width: 100%;
-		height: 800px;
-		left: 0;
-		margin: 0;
-		padding: 0;
+		height: 100%;
 	}
 </style>

@@ -2,10 +2,12 @@
 	import Map from './Map.svelte';
 </script>
 
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
 <body style="margin: 0; padding: 0;">
 	<Map />
 
-	Footer/Legend
+	<!-- Footer/Legend -->
 	<style>
 		.grid-container {
 			position: absolute;

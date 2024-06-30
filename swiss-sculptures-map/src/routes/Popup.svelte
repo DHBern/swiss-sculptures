@@ -1,6 +1,7 @@
 <script>
 	import { queryGeoJSON } from '../queryGeoJSON';
 	import { createEventDispatcher } from 'svelte';
+	import Slideshow from './Slideshow.svelte';
 
 	export let popup_id;
 	export let showLeft = false;
@@ -54,12 +55,12 @@
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'old'}
 					<div class="grid-item">
-						<img
-							src={queriedFeature.properties.image[0]}
-							alt={queriedFeature.properties.sculpture_name}
-							style="position: relative; overflow: hidden; height: 400px; width: 100%;"
+						<div
+							style="position: relative; overflow: hidden; height: 400px; width: 100%; min-height: 400px;"
 							bind:this={imgElementLeft}
-						/>
+						>
+							<Slideshow images={queriedFeature.properties.image} />
+						</div>
 						<div class="info">
 							<h4>Künstler*in:</h4>
 							<p>{queriedFeature.properties.scuptor}</p>
@@ -84,12 +85,12 @@
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'new'}
 					<div class="grid-item">
-						<img
-							src={queriedFeature.properties.image[0]}
-							alt={queriedFeature.properties.sculpture_name}
-							style="position: relative; overflow: hidden; height: 400px; width: 100%;"
-							bind:this={imgElementRight}
-						/>
+						<div
+							style="position: relative; overflow: hidden; height: 400px; width: 100%; min-height: 400px;"
+							bind:this={imgElementLeft}
+						>
+							<Slideshow images={queriedFeature.properties.image} />
+						</div>
 						<div class="info">
 							<h4>Künstler*in:</h4>
 							<p>{queriedFeature.properties.scuptor}</p>

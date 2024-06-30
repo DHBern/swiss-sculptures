@@ -104,7 +104,8 @@
                 "year": "1966",
                 "historic_year": "4 ESS-SPA 1966",
                 "image": [
-                    "https://www.publics-arts.ch/files/original/876a919a4ac8fbe1ce80823dbeacfa3fadd66a43.jpeg"
+                    "https://www.publics-arts.ch/files/original/876a919a4ac8fbe1ce80823dbeacfa3fadd66a43.jpeg",
+                     "https://www.publics-arts.ch/files/original/3531e68436592538fd02a8078da6f126c307b08d.jpg"
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "J\u00fcrg Rihs",
@@ -174,7 +175,8 @@
                 "year": "1974",
                 "historic_year": "6 ESS-SPA 1975",
                 "image": [
-                    "https://www.publics-arts.ch/files/original/2bdffca6fddec5f7415549dd7a6822fcbffa8c65.jpg"
+                    "https://www.publics-arts.ch/files/original/2bdffca6fddec5f7415549dd7a6822fcbffa8c65.jpg",
+                    "https://www.publics-arts.ch/files/original/876a919a4ac8fbe1ce80823dbeacfa3fadd66a43.jpeg"
                 ],
                 "creator": "Micha L. Rieser (via Wikimedia Commons, Attribution)",
                 "photographer": "Renate H\u00fcgli Roth",
@@ -221,10 +223,8 @@
                 "historic_year": "4 ESS-SPA 1966",
                 "image": [
                     "https://www.publics-arts.ch/files/original/f1caa2069535442648c86de8d432485134a5b8d1.jpg",
-                    "https://www.publics-arts.ch/files/original/2ca7d36684e140ae5ddd0e3e85dfc0cdf306fbd0.jpg",
-                    "",
-                    "",
-                    ""
+                    "https://www.publics-arts.ch/files/original/2ca7d36684e140ae5ddd0e3e85dfc0cdf306fbd0.jpg"
+                     
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "J\u00fcrg Rihs",
@@ -248,7 +248,8 @@
                 "year": "1965",
                 "historic_year": "4 ESS-SPA 1966",
                 "image": [
-                    "https://www.publics-arts.ch/files/original/f726633b14663d570b19d1050c8c4d3fe565d579.jpeg"
+                    "https://www.publics-arts.ch/files/original/f726633b14663d570b19d1050c8c4d3fe565d579.jpeg",
+                    "https://www.publics-arts.ch/files/original/2bdffca6fddec5f7415549dd7a6822fcbffa8c65.jpg"
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "J\u00fcrg Rihs",
@@ -296,9 +297,8 @@
                 "image": [
                     "https://www.publics-arts.ch/files/original/e2f6b14453b2b8ec6cd7d71269a8eae019ae005a.jpg",
                     "https://www.publics-arts.ch/files/original/68a332fec40adf76ddc95df2a0f9f074fa5d0788.jpg ",
-                    "https://www.publics-arts.ch/files/original/09147d8d18355cdd54457c697cc4fd3980b158da.jpeg",
-                    "",
-                    ""
+                    "https://www.publics-arts.ch/files/original/09147d8d18355cdd54457c697cc4fd3980b158da.jpeg"
+                     
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "Renate H\u00fcgli Roth",
@@ -368,9 +368,8 @@
                 "year": "1961/62",
                 "historic_year": "3 ESS-SPA 1962",
                 "image": [
-                    "https://www.publics-arts.ch/files/original/757c0d937e7978b7fa97f3a31d0e21b5b4ba4972.tif",
-                    "",
-                    ""
+                    "https://www.publics-arts.ch/files/original/757c0d937e7978b7fa97f3a31d0e21b5b4ba4972.tif"
+                     
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "\u00a9Nachlass Margrit und Walter Linck",
@@ -440,11 +439,7 @@
                 "year": "1975",
                 "historic_year": "6 ESS-SPA 1975",
                 "image": [
-                    "https://www.publics-arts.ch/files/original/4359a4b78614272c2b9055af5f4cd06cbabc7a75.jpeg",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "https://www.publics-arts.ch/files/original/4359a4b78614272c2b9055af5f4cd06cbabc7a75.jpeg"
                 ],
                 "creator": "Christopher Kilchenmann, 2023",
                 "photographer": "Jeanne Chevalier",

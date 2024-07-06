@@ -14,6 +14,7 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
+			height: 25.93vh;
 			display: grid;
 			grid-template-columns: auto auto;
 			gap: 1rem;
@@ -57,8 +58,8 @@
 			<h3>Klicken Sie auf die Punkte und Linien, um mehr Details zu sehen.</h3>
 		</div>
 		<div>
-			<p class="l-text">&#128308 ursprünglicher Standort</p>
-			<p class="l-text">&#128309 neuer Standort</p>
+			<p class="l-text">&#128308 ursprünglicher Standort (Rot)</p>
+			<p class="l-text">&#128309 neuer Standort (Blau)</p>
 		</div>
 	</div>
 </body>

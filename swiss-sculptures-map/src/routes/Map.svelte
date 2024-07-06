@@ -26,11 +26,11 @@
 	// Calculate the width and left values based on the presence of the left and right pop-ups
 	$: mapWidth =
 		showLeft && showRight
-			? 'calc(100% - 1000px)'
+			? 'calc(100% - 52.08vw)'
 			: showLeft || showRight
-				? 'calc(100% - 500px)'
+				? 'calc(100% - 26.04vw)'
 				: '100%';
-	$: mapLeft = showLeft ? '500px' : '0';
+	$: mapLeft = showLeft ? '26.04vw' : '0';
 
 	// Functions to handle the custom events
 	/**
@@ -272,7 +272,7 @@
 	#map-container {
 		position: absolute;
 		overflow: hidden;
-		height: 800px;
+		height: 74.07vh;
 		z-index: 100;
 	}
 	#map {

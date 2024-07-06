@@ -56,7 +56,7 @@
 				{#if queriedFeature.properties.period == 'old'}
 					<div class="grid-item">
 						<div
-							style="position: relative; overflow: hidden; height: 400px; width: 100%; min-height: 400px;"
+							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh;"
 							bind:this={imgElementLeft}
 						>
 							<Slideshow images={queriedFeature.properties.image} />
@@ -86,7 +86,7 @@
 				{#if queriedFeature.properties.period == 'new'}
 					<div class="grid-item">
 						<div
-							style="position: relative; overflow: hidden; height: 400px; width: 100%; min-height: 400px;"
+							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh;"
 							bind:this={imgElementLeft}
 						>
 							<Slideshow images={queriedFeature.properties.image} />
@@ -113,8 +113,8 @@
 	.right {
 		position: absolute;
 		top: 0;
-		height: 800px;
-		width: 500px;
+		height: 74.07vh;
+		width: 26.04vw;
 		padding: 0;
 		margin: 0;
 	}

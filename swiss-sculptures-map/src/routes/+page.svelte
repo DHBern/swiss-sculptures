@@ -4,7 +4,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
-<body style="margin: 0; padding: 0;">
+<body style="margin: 0; padding: 0; overflow:hidden;">
 	<Map />
 
 	<!-- Footer/Legend -->
@@ -14,13 +14,13 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			height: 25.93vh;
+			height: 26vh;
 			display: grid;
 			grid-template-columns: auto auto;
 			gap: 1rem;
-			padding: 20px;
 			background-color: #d9d9d9;
 			z-index: 10;
+			overflow: hidden;
 		}
 
 		.col-auto {
@@ -51,13 +51,16 @@
 			color: #888;
 			font-size: 28px;
 		}
+		.p {
+			padding: 20px;
+		}
 	</style>
 	<div class="grid-container">
-		<div class="col-auto">
+		<div class="col-auto p">
 			<h1>Schweizer Plastiken</h1>
 			<h3>Klicken Sie auf die Punkte und Linien, um mehr Details zu sehen.</h3>
 		</div>
-		<div>
+		<div class="p">
 			<p class="l-text">&#128308 ursprünglicher Standort (Rot)</p>
 			<p class="l-text">&#128309 neuer Standort (Blau)</p>
 		</div>

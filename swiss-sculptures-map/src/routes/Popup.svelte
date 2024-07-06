@@ -135,12 +135,8 @@
 		flex-direction: column;
 	}
 
-	.info {
-		margin-top: 1rem;
-	}
-
 	.info h4 {
-		margin-bottom: 0.5rem;
+		margin-bottom: 0;
 		font-weight: bold;
 	}
 

@@ -57,14 +57,13 @@
 			style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
 			center: [7.25, 47.15], // Centered around Biel/Bienne
 			zoom: 13,
-			minZoom: 8,
-			maxZoom: 20
+			minZoom: 8
 		});
 
 		map.on('load', () => {
 			map.addSource('sculptures', {
 				type: 'geojson',
-				data: 'src/data.geojson'
+				data: '/data.geojson'
 			});
 
 			map.addLayer({
@@ -203,7 +202,7 @@
 					// Create the popup HTML content
 					const popupContent = `
 						<div style="background-color: #d9d9d9">
-						<img src="${image[0]}" alt="${sculpture_name}" style="overflow: hidden; display: flex;" />
+						<img src="${image[0]}" alt="${sculpture_name}" style="overflow: hidden; display: flex; max-width: 100%; height: 37.035vh; display: block; vertical-align: middle;" />
 						<p>${sculpture_name}</p>
 						</div>
 					`;
@@ -273,7 +272,6 @@
 		position: absolute;
 		overflow: hidden;
 		height: 74.07vh;
-		z-index: 100;
 	}
 	#map {
 		width: 100%;

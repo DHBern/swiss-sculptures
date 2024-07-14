@@ -23,7 +23,9 @@
 <div class="slideshow-container">
 	{#each images as image, index}
 		{#if image != '' || image != null}
-			<img src={image} alt="Sculptures" class:active={index === currentIndex} class="slide" />
+			<div class="slide-container {index === currentIndex ? 'active' : ''}">
+				<img src={image} alt="Sculptures" class="slide" />
+			</div>
 		{/if}
 	{/each}
 </div>
@@ -32,16 +34,29 @@
 	.slideshow-container {
 		position: relative;
 		width: 100%;
+		height: 100%;
 		margin: 0;
 		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slide-container {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: none;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.slide {
-		display: none;
-		width: 100%;
+		max-width: 100%;
+		object-fit: contain;
 	}
 
 	.active {
-		display: block;
+		display: flex;
 	}
 </style>

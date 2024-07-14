@@ -54,7 +54,7 @@
 	onMount(async () => {
 		const map = new maplibregl.Map({
 			container: 'map',
-			style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
+			style: `https://api.maptiler.com/maps/dataviz-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
 			center: [7.25, 47.15], // Centered around Biel/Bienne
 			zoom: 13,
 			minZoom: 8
@@ -201,9 +201,11 @@
 
 					// Create the popup HTML content
 					const popupContent = `
-						<div style="background-color: #d9d9d9">
-						<img src="${image[0]}" alt="${sculpture_name}" style="overflow: hidden; display: flex; max-width: 100%; height: 37.035vh; display: block; vertical-align: middle;" />
-						<p>${sculpture_name}</p>
+						<div style="background-color: #d9d9d9; text-align: center;">
+							<div style="display: inline-block; position: relative; max-width: 100%; max-height: 37.035vh; vertical-align: middle;">
+								<img src="${image[0]}" alt="${sculpture_name}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;" />
+							</div>
+							<p>${sculpture_name}</p>
 						</div>
 					`;
 

@@ -1,5 +1,3 @@
-import type { LngLatBoundsLike, LngLatLike } from "maplibre-gl";
-
 export async function queryCoordinates(id: number | string | undefined): Promise<{ arr: [number, number, number, number] }> {
     try {
         // Fetch the GeoJSON file

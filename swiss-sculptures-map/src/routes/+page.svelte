@@ -31,14 +31,14 @@
 			font-weight: bold;
 			color: #333;
 			margin-bottom: 1rem;
-			font-size: 48px;
+			font-size: 4vw;
 		}
 
 		h3 {
 			font-weight: 600;
 			color: #666;
 			margin-bottom: 1rem;
-			font-size: 36px;
+			font-size: 2vw;
 		}
 
 		h4 {
@@ -47,12 +47,22 @@
 		}
 
 		.l-text {
-			margine-top: 2rem;
+			margine-top: 2vh;
 			color: #888;
-			font-size: 28px;
+			font-size: 2vw;
+			padding-left: 1vw;
 		}
 		.p {
-			padding: 20px;
+			padding: 1vw;
+		}
+		.svg {
+			width: 2vw;
+			height: auto;
+		}
+		.line-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	</style>
 	<div class="grid-container">
@@ -60,9 +70,15 @@
 			<h1>Schweizer Plastiken</h1>
 			<h3>Klicken Sie auf die Punkte und Linien, um mehr Details zu sehen.</h3>
 		</div>
-		<div class="p">
-			<p class="l-text">&#128308 ursprünglicher Standort (Rot)</p>
-			<p class="l-text">&#128309 neuer Standort (Blau)</p>
+		<div class="p" style="display:grid;">
+			<div class="line-container">
+				<div><img src="/red.svg" alt="red" class="svg" /></div>
+				<div><p class="l-text">ursprünglicher Standort (Rot)</p></div>
+			</div>
+			<div class="line-container">
+				<div><img src="/blue.svg" alt="blue" class="svg" /></div>
+				<div><p class="l-text">neuer Standort (Blau)</p></div>
+			</div>
 		</div>
 	</div>
 </body>

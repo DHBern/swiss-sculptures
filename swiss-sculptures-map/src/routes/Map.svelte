@@ -5,7 +5,12 @@
 	import { queryCoordinates } from '../queryGeoJSON_coordinates';
 	import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
 
-	/** @type {string | number | undefined} */
+	/**
+	 * @type {maplibregl.Map}
+	 */
+	let map;
+
+	/** @type {any} */
 	let popup_id;
 
 	/**
@@ -22,6 +27,10 @@
 
 	/** @type {string | number | undefined | null} */
 	let hoveredLineId = null;
+
+	// let showBluePoints = true;
+	// let showRedPoints = true;
+	// let overlay;
 
 	// Calculate the width and left values based on the presence of the left and right pop-ups
 	$: mapWidth =
@@ -50,14 +59,33 @@
 		const sr = event.detail;
 		showRight = sr;
 	}
+	/**
+	 * @param {{ detail: { id: any; }; }} event
+	 */
+	function handleShowOldPopup(event) {
+		const id = event.detail.id;
+		if (id !== undefined) {
+			popup_id = id;
+			showLeft = true;
+		}
+	}
+	/**
+	 * @param {{ detail: { id: any; }; }} event
+	 */
+	function handleShowNewPopup(event) {
+		const id = event.detail.id;
+		if (id !== undefined) {
+			popup_id = id;
+			showRight = true;
+		}
+	}
 
 	onMount(async () => {
-		const map = new maplibregl.Map({
+		map = new maplibregl.Map({
 			container: 'map',
 			style: `https://api.maptiler.com/maps/dataviz-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
 			center: [7.25, 47.15], // Centered around Biel/Bienne
-			zoom: 13,
-			minZoom: 8
+			zoom: 13
 		});
 
 		map.on('load', () => {
@@ -259,14 +287,62 @@
 			});
 		});
 	});
+	function resetMap() {
+		if (map) {
+			map.setCenter([7.25, 47.15]);
+			map.setZoom(13);
+		}
+	}
+
+	// function toggleBluePoints() {
+	// 	showBluePoints = !showBluePoints;
+	// 	if (map) {
+	// 		map.setLayoutProperty('bluePoints', 'visibility', showBluePoints ? 'visible' : 'none');
+	// 	}
+	// }
+
+	// function toggleRedPoints() {
+	// 	showRedPoints = !showRedPoints;
+	// 	if (map) {
+	// 		map.setLayoutProperty('redPoints', 'visibility', showRedPoints ? 'visible' : 'none');
+	// 	}
+	// }
 </script>
 
 <div id="map-container" style="width: {mapWidth}; left: {mapLeft};">
-	<div id="map"></div>
+	<div id="map">
+		<button
+			style="position: absolute; z-index:10; color:black; top:1vh; left:1vw; background-color: #d9d9d9;"
+			on:click={resetMap}
+			>Reset Map
+		</button>
+		<!-- <div class="controls">
+			<button
+				style="position: absolute; z-index:10; color:black; top:3vh; left:1vw; background-color: #d9d9d9;"
+				on:click={toggleBluePoints}
+			>
+				toggle new
+			</button>
+			<button
+				style="position: absolute; z-index:10; color:black; top:3vh; left:4vw; background-color: #d9d9d9;"
+				on:click={toggleRedPoints}
+			>
+				toggel old
+			</button>
+		</div> -->
+	</div>
 </div>
 
 <div>
-	<Popup on:closeL={handleCloseL} on:closeR={handleCloseR} {popup_id} {showLeft} {showRight} />
+	<Popup
+		on:closeL={handleCloseL}
+		on:closeR={handleCloseR}
+		{popup_id}
+		{showLeft}
+		{showRight}
+		on:showOldPopup={handleShowOldPopup}
+		on:showNewPopup={handleShowNewPopup}
+	/>
 </div>
 
 <style>
@@ -279,4 +355,12 @@
 		width: 100%;
 		height: 100%;
 	}
+	/* .controls {
+		position: absolute;
+		top: 3vh;
+		left: 1vw;
+		background-color: #d9d9d9;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		z-index: 10;
+	} */
 </style>

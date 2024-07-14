@@ -3,6 +3,9 @@
 	import { createEventDispatcher } from 'svelte';
 	import Slideshow from './Slideshow.svelte';
 
+	/**
+	 * @type {number | undefined}
+	 */
 	export let popup_id;
 	export let showLeft = false;
 	export let showRight = false;
@@ -16,11 +19,6 @@
 	 */
 	let imgElementLeft;
 
-	/**
-	 * @type any
-	 */
-	let imgElementRight;
-
 	// Create an event dispatcher
 	const dispatch = createEventDispatcher();
 
@@ -32,6 +30,12 @@
 	// Close Right
 	function closeR() {
 		dispatch('closeR', false);
+	}
+	function showOldPopup() {
+		dispatch('showOldPopup', { id: popup_id });
+	}
+	function showNewPopup() {
+		dispatch('showNewPopup', { id: popup_id });
 	}
 
 	// Fetch queriedFeature whenever popup_id changes
@@ -68,6 +72,12 @@
 							<p>{queriedFeature.properties.photographer}</p>
 							<h4>Adresse:</h4>
 							<p>{queriedFeature.properties.location}</p>
+							<button
+								style="position: absolute; z-index:10; color:blue; top:40vh; right:1vw; background-color: #d9d9d9;"
+								on:click={showNewPopup}
+							>
+								neuer Standort
+							</button>
 						</div>
 					</div>
 				{/if}
@@ -98,6 +108,12 @@
 							<p>{queriedFeature.properties.photographer}</p>
 							<h4>Adresse:</h4>
 							<p>{queriedFeature.properties.location}</p>
+							<button
+								style="position: absolute; z-index:10; color:red; top:40vh; right:1vw; background-color: #d9d9d9;"
+								on:click={showOldPopup}
+							>
+								ursprünglicher Standort
+							</button>
 						</div>
 					</div>
 				{/if}

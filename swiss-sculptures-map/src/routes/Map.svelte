@@ -83,7 +83,7 @@
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
-			style: `https://api.maptiler.com/maps/dataviz-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
+			style: `https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
 			center: [7.25, 47.15], // Centered around Biel/Bienne
 			zoom: 13
 		});
@@ -291,6 +291,9 @@
 		if (map) {
 			map.setCenter([7.25, 47.15]);
 			map.setZoom(13);
+			showLeft = false;
+			showRight = false;
+			map.setLayoutProperty('lines', 'visibility', 'none');
 		}
 	}
 

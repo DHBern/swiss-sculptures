@@ -87,6 +87,7 @@
 			center: [7.25, 47.15], // Centered around Biel/Bienne
 			zoom: 13
 		});
+		map.dragRotate.disable();
 
 		map.on('load', () => {
 			map.addSource('sculptures', {

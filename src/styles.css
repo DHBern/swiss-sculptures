@@ -1,0 +1,173 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.grid-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 26vh;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1rem;
+	background-color: #d9d9d9;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.col-auto {
+	grid-column: span 1;
+}
+
+h1 {
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 1rem;
+	font-size: 2.5vw;
+}
+
+h3 {
+	font-weight: 600;
+	color: #666;
+	margin-bottom: 1rem;
+	font-size: 1vw;
+}
+
+h4 {
+	font-size: 1vw;
+}
+p {
+	margin: 10px;
+}
+
+.l-text {
+	margin-top: 2vh;
+	color: #888;
+	font-size: 1vw;
+	padding-left: 1vw;
+}
+.p {
+	padding: 1vw;
+}
+.svg {
+	width: 2vw;
+	height: auto;
+}
+
+.line-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#map-container {
+	position: absolute;
+	overflow: hidden;
+	height: 74.07vh;
+}
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+.left,
+.right {
+	position: absolute;
+	top: 0;
+	height: 74.07vh;
+	width: 26.04vw;
+	padding: 0;
+	margin: 0;
+}
+
+.left {
+	left: 0;
+	background-color: #d9d9d9;
+}
+
+.right {
+	right: 0;
+	background-color: #d9d9d9;
+}
+
+.grid-item {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.info h4 {
+	margin: 0;
+	font-weight: bold;
+}
+
+.close-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+	border: 1px solid black;
+	cursor: pointer;
+	font-size: 1.5rem;
+	z-index: 100;
+}
+.slideshow-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide {
+	max-width: 100%;
+	object-fit: contain;
+}
+
+.active {
+	display: flex;
+}
+/* .controls {
+		position: absolute;
+		top: 3vh;
+		left: 1vw;
+		background-color: #d9d9d9;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		z-index: 10;
+	} */
+.popup_title {
+	text-align: center;
+	text-decoration: solid;
+	font-size: 2vw;
+}
+.logo-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 5vh;
+}
+
+.logo {
+	width: 10vw; /* Set a fixed width */
+	height: auto; /* Maintain aspect ratio */
+	max-height: 10vh; /* Set a max height */
+	object-fit: contain; /* Ensure the image fits within the given dimensions without distortion */
+}

@@ -106,7 +106,7 @@
 						'#FFFF00', // Highlight color
 						'#007cbf' // Default color
 					],
-					'line-width': 2
+					'line-width': 8
 				},
 				layout: {
 					visibility: 'none' // Initially hidden
@@ -348,23 +348,3 @@
 		on:showNewPopup={handleShowNewPopup}
 	/>
 </div>
-
-<style>
-	#map-container {
-		position: absolute;
-		overflow: hidden;
-		height: 74.07vh;
-	}
-	#map {
-		width: 100%;
-		height: 100%;
-	}
-	/* .controls {
-		position: absolute;
-		top: 3vh;
-		left: 1vw;
-		background-color: #d9d9d9;
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-		z-index: 10;
-	} */
-</style>

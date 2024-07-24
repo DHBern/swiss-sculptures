@@ -2,6 +2,7 @@
 	import { queryGeoJSON } from '../queryGeoJSON';
 	import { createEventDispatcher } from 'svelte';
 	import Slideshow from './Slideshow.svelte';
+	import { Hr } from 'flowbite-svelte';
 
 	/**
 	 * @type {number | undefined}
@@ -44,7 +45,6 @@
 			try {
 				const { queriedFeatures } = await queryGeoJSON(popup_id);
 				qf = queriedFeatures;
-				// Start the slideshow when data is fetched
 			} catch (error) {
 				console.error('Error querying GeoJSON:', error);
 			}
@@ -59,6 +59,7 @@
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'old'}
 					<div class="grid-item">
+						<div class="popup_title">{queriedFeature.properties.sculpture_name}</div>
 						<div
 							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh; border-style: solid; border-color:red;"
 							bind:this={imgElementLeft}
@@ -66,18 +67,27 @@
 							<Slideshow images={queriedFeature.properties.image} />
 						</div>
 						<div class="info">
+							<a
+								href="none"
+								style="color:black; text-decoration: none;"
+								on:click|preventDefault={showNewPopup}
+							>
+								<span style="font-size: 0.8vw;"
+									>aller à l’emplacement actuel / zum aktuellen Standort</span
+								>
+								<span style="color: blue;">&#9654;</span>
+							</a>
+							<Hr classHr="my-8" />
 							<h4>Künstler*in:</h4>
-							<p>{queriedFeature.properties.scuptor}</p>
+							<p>
+								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
+							</p>
+							<Hr classHr="my-8" />
 							<h4>Fotograf*in:</h4>
 							<p>{queriedFeature.properties.photographer}</p>
+							<Hr classHr="my-8" />
 							<h4>Adresse:</h4>
 							<p>{queriedFeature.properties.location}</p>
-							<button
-								style="position: absolute; z-index:10; color:blue; top:40vh; right:1vw; background-color: #d9d9d9;"
-								on:click={showNewPopup}
-							>
-								neuer Standort
-							</button>
 						</div>
 					</div>
 				{/if}
@@ -95,6 +105,7 @@
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'new'}
 					<div class="grid-item">
+						<div class="popup_title">{queriedFeature.properties.sculpture_name}</div>
 						<div
 							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh; border-style: solid; border-color:blue;"
 							bind:this={imgElementLeft}
@@ -102,18 +113,27 @@
 							<Slideshow images={queriedFeature.properties.image} />
 						</div>
 						<div class="info">
+							<a
+								href="none"
+								style="color:black; text-decoration: none;"
+								on:click|preventDefault={showOldPopup}
+							>
+								<span style="color: red;">&#9664;</span>
+								<span style="font-size: 0.8vw;"
+									>aller à l'emplacement d’origine / zum ursprünglichen Standort</span
+								>
+							</a>
+							<Hr classHr="my-8" />
 							<h4>Künstler*in:</h4>
-							<p>{queriedFeature.properties.scuptor}</p>
+							<p>
+								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
+							</p>
+							<Hr classHr="my-8" />
 							<h4>Fotograf*in:</h4>
 							<p>{queriedFeature.properties.photographer}</p>
+							<Hr classHr="my-8" />
 							<h4>Adresse:</h4>
 							<p>{queriedFeature.properties.location}</p>
-							<button
-								style="position: absolute; z-index:10; color:red; top:40vh; right:1vw; background-color: #d9d9d9;"
-								on:click={showOldPopup}
-							>
-								ursprünglicher Standort
-							</button>
 						</div>
 					</div>
 				{/if}
@@ -123,47 +143,3 @@
 		{/if}
 	</div>
 {/if}
-
-<style>
-	.left,
-	.right {
-		position: absolute;
-		top: 0;
-		height: 74.07vh;
-		width: 26.04vw;
-		padding: 0;
-		margin: 0;
-	}
-
-	.left {
-		left: 0;
-		background-color: #d9d9d9;
-	}
-
-	.right {
-		right: 0;
-		background-color: #d9d9d9;
-	}
-
-	.grid-item {
-		padding: 1rem;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.info h4 {
-		margin-bottom: 0;
-		font-weight: bold;
-	}
-
-	.close-btn {
-		position: absolute;
-		top: 0;
-		right: 0;
-		background-color: transparent;
-		border: 1px solid black;
-		cursor: pointer;
-		font-size: 1.5rem;
-		z-index: 100;
-	}
-</style>

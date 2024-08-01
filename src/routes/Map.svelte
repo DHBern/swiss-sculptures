@@ -23,6 +23,8 @@
 	 */
 	export let showRight = false;
 
+	export let a = true;
+
 	/** @type {string | number | undefined | null} */
 	let hoveredPointId = null;
 
@@ -371,5 +373,6 @@
 		{showRight}
 		on:showOldPopup={handleShowOldPopup}
 		on:showNewPopup={handleShowNewPopup}
+		{a}
 	/>
 </div>

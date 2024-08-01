@@ -10,6 +10,7 @@
 	export let popup_id;
 	export let showLeft = false;
 	export let showRight = false;
+	export let a = false;
 
 	/**
 	 * @type {import("../queryGeoJSON").GeoJSONFeature[] | { properties: { image: string[]; }; }[]}
@@ -67,16 +68,18 @@
 							<Slideshow images={queriedFeature.properties.image} />
 						</div>
 						<div class="info">
-							<a
-								href="none"
-								style="color:black; text-decoration: none;"
-								on:click|preventDefault={showNewPopup}
-							>
-								<span style="font-size: 0.8vw;"
-									>aller à l’emplacement actuel / zum aktuellen Standort</span
+							{#if a}
+								<a
+									href="none"
+									style="color:black; text-decoration: none;"
+									on:click|preventDefault={showNewPopup}
 								>
-								<span style="color: blue;">&#9654;</span>
-							</a>
+									<span style="font-size: 0.8vw;"
+										>aller à l’emplacement actuel / zum aktuellen Standort</span
+									>
+									<span style="color: blue;">&#9654;</span>
+								</a>
+							{/if}
 							<Hr classHr="my-8" />
 							<h4>Künstler*in:</h4>
 							<p>
@@ -113,16 +116,18 @@
 							<Slideshow images={queriedFeature.properties.image} />
 						</div>
 						<div class="info">
-							<a
-								href="none"
-								style="color:black; text-decoration: none;"
-								on:click|preventDefault={showOldPopup}
-							>
-								<span style="color: red;">&#9664;</span>
-								<span style="font-size: 0.8vw;"
-									>aller à l'emplacement d’origine / zum ursprünglichen Standort</span
+							{#if a}
+								<a
+									href="none"
+									style="color:black; text-decoration: none;"
+									on:click|preventDefault={showOldPopup}
 								>
-							</a>
+									<span style="color: red;">&#9664;</span>
+									<span style="font-size: 0.8vw;"
+										>aller à l'emplacement d’origine / zum ursprünglichen Standort</span
+									>
+								</a>
+							{/if}
 							<Hr classHr="my-8" />
 							<h4>Künstler*in:</h4>
 							<p>

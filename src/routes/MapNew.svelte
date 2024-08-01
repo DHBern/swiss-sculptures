@@ -26,9 +26,6 @@
 	/** @type {string | number | undefined | null} */
 	let hoveredPointId = null;
 
-	/** @type {string | number | undefined | null} */
-	let hoveredLineId = null;
-
 	// Calculate the width and left values based on the presence of the left and right pop-ups
 	$: mapWidth =
 		showLeft && showRight
@@ -39,14 +36,6 @@
 	$: mapLeft = showLeft ? '26.04vw' : '0';
 
 	// Functions to handle the custom events
-	/**
-	 * @param {{ detail: any; }} event
-	 */
-	function handleCloseL(event) {
-		// Retrieve the value of showLeft from the event
-		const sl = event.detail;
-		showLeft = sl;
-	}
 
 	/**
 	 * @param {{ detail: any; }} event
@@ -56,16 +45,7 @@
 		const sr = event.detail;
 		showRight = sr;
 	}
-	/**
-	 * @param {{ detail: { id: any; }; }} event
-	 */
-	function handleShowOldPopup(event) {
-		const id = event.detail.id;
-		if (id !== undefined) {
-			popup_id = id;
-			showLeft = true;
-		}
-	}
+
 	/**
 	 * @param {{ detail: { id: any; }; }} event
 	 */
@@ -81,34 +61,15 @@
 		map = new maplibregl.Map({
 			container: 'map',
 			style: `https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
-			center: [7.25, 47.15], // Centered around Biel/Bienne
-			zoom: 13
+			center: [8.2275, 46.8182], // Centered around Switzerland
+			zoom: 7
 		});
 		map.dragRotate.disable();
 
 		map.on('load', () => {
 			map.addSource('sculptures', {
 				type: 'geojson',
-				data: '/data.geojson'
-			});
-
-			map.addLayer({
-				id: 'lines',
-				type: 'line',
-				source: 'sculptures',
-				paint: {
-					'line-color': [
-						'case',
-						['boolean', ['feature-state', 'hover'], false],
-						'#FFFF00', // Highlight color
-						'#007cbf' // Default color
-					],
-					'line-width': 8
-				},
-				layout: {
-					visibility: 'none' // Initially hidden
-				},
-				filter: ['==', '$type', 'LineString']
+				data: '/new_points.geojson'
 			});
 
 			map.addLayer({
@@ -145,68 +106,7 @@
 					popup_id = id;
 
 					// Open Popups
-					if (clickedFeature.properties.period == 'new') {
-						showLeft = false;
-						showRight = true;
-					} else if (clickedFeature.properties.period == 'old') {
-						showRight = false;
-						showLeft = true;
-					}
-					// Draw line and zoom
-					const sculpture = clickedFeature.properties.sculpture_name;
-					if (id !== undefined) {
-						map.once('render', () => {
-							// Turn the previous filter to none
-							map.setLayoutProperty('lines', 'visibility', 'none');
-
-							// Turn the filter at the clicked point to the opposite state
-							map.setFilter('lines', ['==', ['get', 'sculpture_name'], sculpture]);
-
-							const visibility = map.getLayoutProperty('lines', 'visibility');
-							const vis = visibility === 'none' ? 'visible' : 'none';
-							map.setLayoutProperty('lines', 'visibility', vis);
-
-							/**
-							 * @type any
-							 */
-							let filteredPoints;
-							setTimeout(async () => {
-								const coor = await queryCoordinates(id);
-								// Zoom to fit the clicked point and its corresponding point
-								const padding = { top: 50, bottom: 50, left: 50, right: 50 };
-
-								// Fit the map to the bounding box with the specified padding
-								map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
-							}, 500); // Adjust the timeout value as needed
-						});
-					}
-				}
-			});
-			map.on('click', 'lines', async (e) => {
-				const features = map.queryRenderedFeatures(e.point, { layers: ['lines'] });
-				if (features.length) {
-					const clickedFeature = features[0];
-					const id = clickedFeature.id;
-					popup_id = id;
-
-					// Toggle both left and right popups
-					showLeft = true;
 					showRight = true;
-
-					// Toggle line color between original and highlighted
-					const isHighlighted = map.getFeatureState({
-						source: 'sculptures',
-						id: clickedFeature.id
-					}).hover;
-					map.setFeatureState(
-						{ source: 'sculptures', id: clickedFeature.id },
-						{ hover: !isHighlighted }
-					);
-
-					// Panning feature
-					const coor = await queryCoordinates(id);
-					const padding = { top: 50, bottom: 50, left: 50, right: 50 };
-					map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
 				}
 			});
 
@@ -264,34 +164,13 @@
 				// Remove the popup
 				popup.remove();
 			});
-
-			map.on('mouseenter', 'lines', (e) => {
-				map.getCanvas().style.cursor = 'pointer';
-				if (e.features && e.features.length) {
-					hoveredLineId = e.features[0].id;
-					if (hoveredLineId !== null) {
-						map.setFeatureState({ source: 'sculptures', id: hoveredLineId }, { hover: false });
-					}
-					map.setFeatureState({ source: 'sculptures', id: hoveredLineId }, { hover: true });
-				}
-			});
-
-			map.on('mouseleave', 'lines', () => {
-				map.getCanvas().style.cursor = '';
-				if (hoveredLineId !== null) {
-					map.setFeatureState({ source: 'sculptures', id: hoveredLineId }, { hover: false });
-				}
-				hoveredLineId = null;
-			});
 		});
 	});
 	function resetMap() {
 		if (map) {
-			map.setCenter([7.25, 47.15]);
-			map.setZoom(13);
-			showLeft = false;
+			map.setCenter([8.2275, 46.8182]);
+			map.setZoom(7);
 			showRight = false;
-			map.setLayoutProperty('lines', 'visibility', 'none');
 		}
 	}
 
@@ -363,13 +242,5 @@
 </div>
 
 <div>
-	<Popup
-		on:closeL={handleCloseL}
-		on:closeR={handleCloseR}
-		{popup_id}
-		{showLeft}
-		{showRight}
-		on:showOldPopup={handleShowOldPopup}
-		on:showNewPopup={handleShowNewPopup}
-	/>
+	<Popup on:closeR={handleCloseR} {popup_id} {showRight} on:showNewPopup={handleShowNewPopup} />
 </div>

@@ -26,7 +26,7 @@
 			<img
 				src="/default-img.png"
 				alt="Sculptures"
-				style="object-fit: contain; width:100%; height:100%;"
+				style=" max-width: 100%; max-height: 100%; object-fit: cover;"
 			/>
 		</div>
 	{/if}

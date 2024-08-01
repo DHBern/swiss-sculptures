@@ -61,7 +61,7 @@
 					<div class="grid-item">
 						<div class="popup_title">{queriedFeature.properties.sculpture_name}</div>
 						<div
-							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh; border-style: solid; border-color:red;"
+							style="position: relative; overflow: hidden; height: 37.035vh; width: auto; max-height: 37.035vh; border-style: solid; border-color:red;"
 							bind:this={imgElementLeft}
 						>
 							<Slideshow images={queriedFeature.properties.image} />

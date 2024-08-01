@@ -1,0 +1,2088 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": 0,
+            "properties": {
+                "sculptor": "Corsin Fontana",
+                "sculpture_name": "Bodengravierung",
+                "year": "1986",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/0b8bbd2df7529db496fab6fc49e7cb341b6ae971.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1986",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2409365,
+                    47.1366145
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 1,
+            "properties": {
+                "sculptor": "Hans Aeschbacher",
+                "sculpture_name": "Figur II",
+                "year": "1966",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/9970109971cc5891aa162b94618e7159ba8682ff.jpg"
+                ],
+                "photographer": "J\u00fcrg Rihs, 1966",
+                "location": "Parc du Palais des Congr\u00e8s / Park des Kongresshauses, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2472465,
+                    47.1344635
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "properties": {
+                "sculptor": "Annemie Fontana",
+                "sculpture_name": "Sunrise",
+                "year": "1974",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/03978c6458bde9032191bc427a55e7032ec67a1b.jpg"
+                ],
+                "photographer": "Renate H\u00fcgli Roth, 1975",
+                "location": "Faubourg du Lac / Seevorstadt 14, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2366934999999994,
+                    47.136438500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "properties": {
+                "sculptor": "Andr\u00e9 Ramseyer",
+                "sculpture_name": "Grand Astre",
+                "year": "1965",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/f1caa2069535442648c86de8d432485134a5b8d1.jpg"
+                ],
+                "photographer": "J\u00fcrg Rihs, 1966",
+                "location": "\u00c1 c\u00f4t\u00e9 du Palais de Congr\u00e8s / Neben dem Kongresshaus, rue Centrale / Zentralstrasse 60, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2478165,
+                    47.1345515
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 4,
+            "properties": {
+                "sculptor": "Ueli Berger",
+                "sculpture_name": "PH-PH",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/e2f6b14453b2b8ec6cd7d71269a8eae019ae005a.jpg",
+                    "https://www.publics-arts.ch/files/original/68a332fec40adf76ddc95df2a0f9f074fa5d0788.jpg "
+                ],
+                "photographer": "Renate H\u00fcgli Roth, 1975",
+                "location": "Pr\u00e8s le funiculaire Macolin / Bei der Magglingenbahn, chemin de Seefels / Seefelsweg, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2358395,
+                    47.1358635
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 5,
+            "properties": {
+                "sculptor": "Andr\u00e9 Ramseyer",
+                "sculpture_name": "Consolation",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/2ca7d36684e140ae5ddd0e3e85dfc0cdf306fbd0.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, Archives / Archiv ESS-SPA, c. / um 1970",
+                "location": "Place Centrale / Zentralplatz, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.246662499999999,
+                    47.1369265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 6,
+            "properties": {
+                "sculptor": "Walter Linck",
+                "sculpture_name": "Harpe Anim\u00e9e",
+                "year": "1961\u201362",
+                "historic_year": "ESS-SPA 3, 1962",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/757c0d937e7978b7fa97f3a31d0e21b5b4ba4972.tif"
+                ],
+                "photographer": "\u00a9 Succession / Nachlass Margrit und Walter Linck, 1962",
+                "location": "Pr\u00e9s-de-la-Rive, au bord du lac / Strandboden am Seeufer, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.232772499999999,
+                    47.132855500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 7,
+            "properties": {
+                "sculptor": "Berner Arbeitsgemeinschaft (Eggenschwiler, Vetter, W\u00e4lti, Kunz)",
+                "sculpture_name": "Farbige Baumruine",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4359a4b78614272c2b9055af5f4cd06cbabc7a75.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "APP Bienne-Seeland / BVS Biel Seeland, Chemin de la Ciblerie / Scheibenweg 45, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.26792972262247,
+                    47.1381411623771
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 8,
+            "properties": {
+                "sculptor": "Ueli Berger",
+                "sculpture_name": "Jura",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/09147d8d18355cdd54457c697cc4fd3980b158da.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Gymnase Bienne-Seeland / Gymnasium Biel-Seeland, rue du D\u00e9barcad\u00e8re / L\u00e4ndtestrasse 10, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2352615,
+                    47.1330225
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 9,
+            "properties": {
+                "sculptor": "Franz P\u00f6singer",
+                "sculpture_name": "SOG",
+                "year": "1980",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/2ee48578c9f367dd2312be08e75e8853534b4cc4.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1986",
+                "location": "\u00c9cole Dufour / Dufour-Schulhaus, rue G\u00e9n\u00e9ral-Dufour / General-Dufour-Strasse 18, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.248263229609799,
+                    47.1397748192808
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 10,
+            "properties": {
+                "sculptor": "Berner Arbeitsgemeinschaft (Eggenschwiler, Vetter, W\u00e4lti, Kunz)",
+                "sculpture_name": "Beton-Messingkubus",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4359a4b78614272c2b9055af5f4cd06cbabc7a75.jpeg",
+                    "https://www.publics-arts.ch/files/original/063fe17528de330a7279ce04807c522a4187a14d.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "APP Bienne-Seeland / BVS Biel Seeland, chemin de la Ciblerie / Scheibenweg 45, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2676815,
+                    47.1380655
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 11,
+            "properties": {
+                "sculptor": "Berner Arbeitsgemeinschaft (Eggenschwiler, Vetter, W\u00e4lti, Kunz)",
+                "sculpture_name": "Drei Ger\u00fcstkuben",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4359a4b78614272c2b9055af5f4cd06cbabc7a75.jpeg",
+                    "https://www.publics-arts.ch/files/original/063fe17528de330a7279ce04807c522a4187a14d.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "APP Bienne-Seeland / BVS Biel Seeland, chemin de la Ciblerie / Scheibenweg 45, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2675785,
+                    47.138202500000006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 12,
+            "properties": {
+                "sculptor": "Rudolf Bl\u00e4ttler",
+                "sculpture_name": "Mann und Weib",
+                "year": "1995",
+                "historic_year": "ESS-SPA 1997",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/375e915e0246c373006caa5aeac565f4b7e7acde.png"
+                ],
+                "photographer": "\u00a9 Rudolf Bl\u00e4ttler, 1996",
+                "location": "Escalier sur la place de l'\u00e9glise [pr\u00e9vu] / Treppe am Kirchplatz [geplant], 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2468775,
+                    47.1414185
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 13,
+            "properties": {
+                "sculptor": "Matias Spescha",
+                "sculpture_name": "Luftkubus",
+                "year": "1986",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/314282dc359723ac96632f68cbed5965deb2d9b4.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1986",
+                "location": "\u00c9cole Dufour / Dufour-Schulhaus, rue G\u00e9n\u00e9ral-Dufour / General-Dufour-Strasse 18, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2481184999999995,
+                    47.1395795
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 14,
+            "properties": {
+                "sculptor": "Andr\u00e9 Ramseyer",
+                "sculpture_name": "Orion",
+                "year": "1965",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/0bbd0465da688ab1c149c5566b6b3a62a97de2e3.jpg",
+                    "https://www.publics-arts.ch/files/original/9dfebc21190f977edf9305664ad6239ca5e73795.jpeg"
+                ],
+                "photographer": "Famille / Familie Ramseyer, 1966",
+                "location": "A c\u00f4t\u00e9 du Palais de Congr\u00e8s / Neben dem Kongresshaus, rue Centrale / Zentralstrasse 60, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2477775,
+                    47.1345875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 15,
+            "properties": {
+                "sculptor": "Joseph Wyss",
+                "sculpture_name": "Otok 2",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/7633c837a4d5321a49bc0743b7976cdc70d497ff.tif"
+                ],
+                "photographer": "Heinz Baumann, 1970 \u00a9 Biblioth\u00e8que ETH Zurich, Archives photographiques / ETH-Bibliothek Z\u00fcrich, Bildarchiv",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2333015,
+                    47.1347735
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 16,
+            "properties": {
+                "sculptor": "Gianfredo Camesi",
+                "sculpture_name": "Dimension unique",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/d4586d2832de6272fd6d01b61200372e24a0c1a9.jpg",
+                    "https://www.publics-arts.ch/files/original/531d68036353b142a798f455f69e7a83f3b2223a.jpg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1975",
+                "location": "Terrasse de l'eglise / Kirchterrasse, rue Basse / Untergasse 17, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2464675,
+                    47.1411455
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 17,
+            "properties": {
+                "sculptor": "Manuel Torres",
+                "sculpture_name": "Enlac\u00e9",
+                "year": "1974",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/3d92f3a6a9cd2050eca92a0e936acfa492dd04f2.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1975, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Faubourg du Lac, pr\u00e8s du funiculaire Macolin / Seevorstadt, nahe der Magglingenbahn, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2362975,
+                    47.136300500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 18,
+            "properties": {
+                "sculptor": "J\u00fcrg Altherr",
+                "sculpture_name": "EQUI-LIBRE \u2013 Stahlkonstruktion XIIX",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/3b23ad64930e2a2c159f5b439f52f3654a497525.jpeg",
+                    "https://www.publics-arts.ch/files/original/3b14d081a829bb24c28355b8a853b99526e49ce6.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Pr\u00e9s-de-la-Rive, devant le Gymnase / Strandboden, vor dem Gymnasium, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2346775,
+                    47.133767500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 19,
+            "properties": {
+                "sculptor": "Mariann Grunder",
+                "sculpture_name": "Skulptur I",
+                "year": "1965\u201366",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/97bd899709a394a82121c0e32363278c479e9df1.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1966, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Parc du Palais des Congr\u00e8s / Park des Kongresshauses, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247107499999999,
+                    47.134805500000006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 20,
+            "properties": {
+                "sculptor": "Zolt\u00e1n Kem\u00e9ny",
+                "sculpture_name": "M\u00e9canisme de la Conception",
+                "year": "1964",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/e7e93f8fb0b7aacbec1923274c30a9d020396e14.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1966, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Dans le Palais des Congr\u00e8s / Im Kongresshaus, rue Centrale / Zentralstrasse 60, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247976156952202,
+                    47.13497191688913
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 21,
+            "properties": {
+                "sculptor": "Bernhard Luginb\u00fchl",
+                "sculpture_name": "Rex",
+                "year": "1965",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/5f19ecb2cc8272bc92778f8c2683b0d7032c5f34.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1966, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Devant le Palais de Congr\u00e8s / Vor dem Kongresshaus, rue Centrale / Zentralstrasse 60, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2485085,
+                    47.1351515
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 22,
+            "properties": {
+                "sculptor": "Raffael Benazzi",
+                "sculpture_name": "Das Loch, Versuch einer unterirdischen plastischen Bewegung",
+                "year": "1966",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/68244bd350901ce4120a2074059b8fb666715761.jpeg",
+                    "https://www.publics-arts.ch/files/original/2667ddcade62468a111d336e95386108d9981322.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1966, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Parc du Palais des Congr\u00e8s / Park des Kongresshauses, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2472354999999995,
+                    47.1342525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 23,
+            "properties": {
+                "sculptor": "Erich M\u00fcller",
+                "sculpture_name": "Einhorn",
+                "year": "1952",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/52b636f51e9ee098c0c1bc314393f2b030c7e596.tif",
+                    "https://www.publics-arts.ch/files/original/bb7833016dd806403c74cb2ea0a3ba0a240703c1.tif"
+                ],
+                "photographer": "Comet Photo AG, 1954, Com_M03-0221-0015, Biblioth\u00e8que ETH Zurich, Archives photographiques / ETH-Bibliothek Z\u00fcrich, Bildarchiv / Public Domain Mark",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 24,
+            "properties": {
+                "sculptor": "Walter Linck",
+                "sculpture_name": "Fontaine",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/46bb3210f8f9a0042f4a9b42d95033ae70cb6e8e.jpg"
+                ],
+                "photographer": "Comet Photo AG, 1954, Com_M03-0221-0001, Biblioth\u00e8que ETH Zurich, Archives photographiques / ETH-Bibliothek Z\u00fcrich, Bildarchiv / Public Domain Mark",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 25,
+            "properties": {
+                "sculptor": "Giuliano Pedretti",
+                "sculpture_name": "Nostalgie (Kuh)",
+                "year": "1974",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/65c2e44200b976a3e319cb6f8c7687b7c492a5cb.jpg",
+                    "https://www.publics-arts.ch/files/original/5ef9dee2a8c3905250f8650c25c2976b84c84101.jpg"
+                ],
+                "photographer": "Renate H\u00fcgli Roth, 1975",
+                "location": "Pont-du-Moulin / M\u00fchlebr\u00fccke 5, Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2439515,
+                    47.140240500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 26,
+            "properties": {
+                "sculptor": "Erwin Rehmann",
+                "sculpture_name": "Maternit\u00e9",
+                "year": "1950",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/9f8192e3e3cb1e7c9d9220a074af2ac248c65b5a.jpeg"
+                ],
+                "photographer": "Archives municipales Bienne / Stadtarchiv Biel, Collection de photographies de la police / Polizeifotosammlung, N_701-2-5, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252534499999999,
+                    47.142795500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 27,
+            "properties": {
+                "sculptor": "Walter Kretz",
+                "sculpture_name": "Betonstelen",
+                "year": "1974",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/cb9caf5dd41cbc907fdec6df45d6c92cf99de846.jpg",
+                    "https://www.publics-arts.ch/files/original/b581b7713852e4999b4a3108d61f96b49180785c.jpg",
+                    "https://www.publics-arts.ch/files/original/0c043b65e5742d482b85b3677fd6fd672ebfc1cc.jpg",
+                    "https://www.publics-arts.ch/files/original/67d3cc5e7f806742d0bc537defe5b588318b04fd.jpg"
+                ],
+                "photographer": "Source / Quelle: Kunstnachrichten, 1975",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2412265,
+                    47.137482500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 28,
+            "properties": {
+                "sculptor": "Olivier Mosset",
+                "sculpture_name": "Untitled (A Paul C\u00e9zanne)",
+                "year": "2000",
+                "historic_year": "ESS-SPA 10, 2000",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/ae7e16060fa8d73db72a5894946514eb39dd40cc.jpeg"
+                ],
+                "photographer": "Claude Joray, 2000",
+                "location": "Parc de jeux gazonn\u00e9 du Palais des Congr\u00e8s / Spielwiese des Kongresshauses, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247340833333333,
+                    47.13456305555556
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 29,
+            "properties": {
+                "sculptor": "Walter V\u00f6geli & Urs Suter",
+                "sculpture_name": "Trojanisches Pferd",
+                "year": "1977\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/8670cd1bf9a758fc282b17f67020aaca85a2c66f.jpg",
+                    "https://www.publics-arts.ch/files/original/bf205702b1b92b784192e6dea12590244e8b9ea3.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.239090833333333,
+                    47.13422972222222
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 30,
+            "properties": {
+                "sculptor": "Willy Weber",
+                "sculpture_name": "Wasserrohr",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/8339f9eb3652761d0605ff7a872bfde0eaa64ecf.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1970, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Devant le Palais des Congr\u00e8s / Vor dem Kongresshaus, rue Centrale / Zentralstrasse 60, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247979722222222,
+                    47.13464638888889
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 31,
+            "properties": {
+                "sculptor": "Herbert Distel",
+                "sculpture_name": "Findling",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/43b82cf0ff0367932d310f64cc6f7325448fba6a.jpeg"
+                ],
+                "photographer": "\u00a9 Herbert Distel, 1970",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2354375,
+                    47.1327735
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 32,
+            "properties": {
+                "sculptor": "Kurt Sigrist",
+                "sculpture_name": "Projekt Zeitraum",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/678ff7c4d9bca7920a2b82b58b50be45922f9d81.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.232563055555556,
+                    47.13370194444445
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 33,
+            "properties": {
+                "sculptor": "Schang Hutter",
+                "sculpture_name": "Vertschaupet",
+                "year": "1980",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/90a2ff5e3abffdd794c86324a9edb36c369c8fb7.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Devant le NMB Nouveau Mus\u00e9e Bienne / Vor dem NMB Neues Museum Biel, Faubourg du Lac / Seevorstadt 52, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.242035277777777,
+                    47.139118611111115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 34,
+            "properties": {
+                "sculptor": "Angel Duarte",
+                "sculpture_name": "E 1",
+                "year": "1963\u201370",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/5664da979a432a868c18a2288deb06473d8d91a1.jpeg",
+                    "https://www.publics-arts.ch/files/original/5664da979a432a868c18a2288deb06473d8d91a1.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1970, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Jardin de la groupe Swatch / Gartenanlage der Swatch Group, Faubourg du Lac / Seevorstadt 6, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2360805,
+                    47.1356455
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 35,
+            "properties": {
+                "sculptor": "Peter Kunz",
+                "sculpture_name": "Findlingskopf",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/9e67f1ef5f6e49a93bfae1fdbcfd1bf3745f3d11.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1975, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Chemin de Seefels / Seefelsweg, devant / vor Swatch Group, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2368315,
+                    47.1351875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 36,
+            "properties": {
+                "sculptor": "Oskar Wiggli",
+                "sculpture_name": "Eisenplastik III (66C)",
+                "year": "1974\u201375",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/e6edbb76c1a910da08407088799eef470a4906b1.jpg",
+                    "https://www.publics-arts.ch/files/original/bcbb873fe7fe7e78219236638db93ce4e57bc6c1.jpg",
+                    "https://www.publics-arts.ch/files/original/04d5bfc8194fc701803536496b7ab1c9aef9f93f.jpg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1975",
+                "location": "Terrasse de l'eglise / Kirchterrasse, rue Basse / Untergasse 17, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2466485,
+                    47.1412175
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 37,
+            "properties": {
+                "sculptor": "Henri Presset",
+                "sculpture_name": "Figure Xa",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/c624b4f4cdd92ab7eb4a1eb485a609eac42015fc.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2409805,
+                    47.1367915
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 38,
+            "properties": {
+                "sculptor": "Walter Linck",
+                "sculpture_name": "Vegetativ III",
+                "year": "1958",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/36a0c8f0daa23755b585f4780025d514b4fc41c1.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 39,
+            "properties": {
+                "sculptor": "\u00d6d\u00f6n Koch",
+                "sculpture_name": "Sculpture",
+                "year": "1960\u201361",
+                "historic_year": "ESS-SPA 3, 1962",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/3212279493751be7258d27d2bb6190c782bda4ab.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1962, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, rue du D\u00e9barcad\u00e8re / L\u00e4ndtestrasse 4, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2331935,
+                    47.1340955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 40,
+            "properties": {
+                "sculptor": "Ursula Malbin",
+                "sculpture_name": "Femme au poisson",
+                "year": "1956",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/d4391832fe23099966279b94c2ad0cbfc7c1331e.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252437252338304,
+                    47.14361862916932
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 41,
+            "properties": {
+                "sculptor": "Andr\u00e9 Gigon",
+                "sculpture_name": "Grand objet",
+                "year": "1958",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/f0d23b51552061575350a87d86b597e359451263.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 42,
+            "properties": {
+                "sculptor": "Hans Aeschbacher",
+                "sculpture_name": "Figur I",
+                "year": "1955",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/cdd91c3a0c7e701d9bdc8192bf697133f488c212.jpeg",
+                    "https://www.publics-arts.ch/files/original/cdd91c3a0c7e701d9bdc8192bf697133f488c212.jpeg",
+                    "https://www.publics-arts.ch/files/original/1feddbfaf9f6f9c7746832045d2d5a99fcbf09f1.png"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522234999999995,
+                    47.1433215
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 43,
+            "properties": {
+                "sculptor": "Rehmann, Erwin",
+                "sculpture_name": "Kugelraum mit Strahlenkern",
+                "year": "1958",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/526fb7cdfe6c95262c3ecf9dbfc3a2c2347612f4.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 44,
+            "properties": {
+                "sculptor": "Franz Eggenschwiler",
+                "sculpture_name": "Dreibeiniger Mondaffe",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4b3ff94981d1f08b88ba558eaf4d6a6d45ad48ef.jpeg",
+                    "https://www.publics-arts.ch/files/original/55a448c3672d9d07eaa1c61c3851e2f7241231f4.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1980, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2336635,
+                    47.1322885
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 45,
+            "properties": {
+                "sculptor": "Albert Siegenthaler & Gillian White",
+                "sculpture_name": "S\u00fcdtor / Paradise Lost",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/e0e78a8888600034319b098e28cfd976d810e561.jpeg",
+                    "https://www.publics-arts.ch/files/original/c2df02929256052c07f4b89e91b3436494be80ba.jpeg",
+                    "https://www.publics-arts.ch/files/original/37952d9b7d5f7c8a28f75fb8f20b9b349f4c57d9.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1980, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Pr\u00e9s-de-la-Rive, prairie derri\u00e8re le Gymnase Bienne-Seeland / Strandboden, Wiese hinter Gymnasium Biel-Seeland, rue du D\u00e9barcad\u00e8re / L\u00e4ndtestrasse 10, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2343645,
+                    47.1336455
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 46,
+            "properties": {
+                "sculptor": "Willy Wimpfheimer",
+                "sculpture_name": "Figur VII",
+                "year": "1986",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/cf2b84b57bcf7a52385776a7273e2db174c8f894.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1986",
+                "location": "Centre-ville de Bienne / Bieler Innenstadt, rue du Nidau / Nidaugasse 62, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.246707499999999,
+                    47.1379195
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 47,
+            "properties": {
+                "sculptor": "Kurt Sigrist",
+                "sculpture_name": "Zwei Einsiedeleien",
+                "year": "1986",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/d16c11538e945e217ba2822ca3db53ded241ffe9.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1986",
+                "location": "Rue de Flore / Florastrasse, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2471615,
+                    47.1384125
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 48,
+            "properties": {
+                "sculptor": "Santiago Calatrava",
+                "sculpture_name": "S\u00e4ulen",
+                "year": "1986",
+                "historic_year": "ESS-SPA 8, 1986",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1ab35d327b0cd84f9ae370e659d2be077598e815.jpg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1986",
+                "location": "Rue de l'Union / Unionsgasse, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2443545,
+                    47.139621500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 49,
+            "properties": {
+                "sculptor": "Carl Bucher",
+                "sculpture_name": "Baalbek",
+                "year": "1977",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1a3d60e4d72be227a78c094d6fe44d0ae3d63a78.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1980, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Angle Faubourg du Lac et Promenade de la Suze / Ecke Seevorstadt und Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2417985,
+                    47.139249500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 50,
+            "properties": {
+                "sculptor": "Robert Lienhard",
+                "sculpture_name": "Cerf volant",
+                "year": "1957",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/48665712c967490802591a1ffef9c6e38e4db3d5.jpeg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 51,
+            "properties": {
+                "sculptor": "Remo Rossi",
+                "sculpture_name": "Toro",
+                "year": "1953",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/aecece448a8264aed1e47c81cb9d35ccf0e30043.tif",
+                    "https://www.publics-arts.ch/files/original/aecece448a8264aed1e47c81cb9d35ccf0e30043.tif"
+                ],
+                "photographer": "Archives municipales Bienne / Stadtarchiv Biel, Collection de photographies de la police / Polizeifotosammlung, N_704-2-1, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2518525,
+                    47.1439055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 52,
+            "properties": {
+                "sculptor": "Paul Bianchi",
+                "sculpture_name": "Gu\u00e9pard II",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/33c94274f26410e0819f3acbe59f0717c77498d0.jpg"
+                ],
+                "photographer": "\u00a9 Foto Schmid, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252434790601456,
+                    47.14359011171352
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 53,
+            "properties": {
+                "sculptor": "Raffael Benazzi",
+                "sculpture_name": "Figur 1446",
+                "year": "1968",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/c7df7acb7f69efef8bd6c3c4e3cd2eb371d336f8.png"
+                ],
+                "photographer": "Source / Quelle: Journal du Jura, 8. Juli 1970, p. / S. 2",
+                "location": "Parvis du Palais des Congr\u00e8s / Vorplatz des Kongresshauses, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247949520829098,
+                    47.134946201121984
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 54,
+            "properties": {
+                "sculptor": "Alma Rossini",
+                "sculpture_name": "Jeu d'eau",
+                "year": "1969",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4341ec170d648538d883105f20fcce033817cfa2.png"
+                ],
+                "photographer": "Quelle / Source: L'Express, 22. Juni 1970, p. / S. 11",
+                "location": "\u00c1 c\u00f4t\u00e9 du Palais de Congr\u00e8s / Neben dem Kongresshaus, rue Centrale / Zentralstrasse 60, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247962212468487,
+                    47.13496128548712
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 55,
+            "properties": {
+                "sculptor": "Heinz Fiorese",
+                "sculpture_name": "Ballspieler",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/3fe7d37ee4c860bad5df65efa69ac18ecdc8bd84.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2524393324388265,
+                    47.1435812682983
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 56,
+            "properties": {
+                "sculptor": "Albert Schilling",
+                "sculpture_name": "Demeter Erinys",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/ec1a968c0d4706dba097893c72ce27c2359bb1d8.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2524393324388265,
+                    47.1435812682983
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 57,
+            "properties": {
+                "sculptor": "Jakob Probst",
+                "sculpture_name": "Seilt\u00e4nzerin",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/fba5679be9632e30b641ce2f195bc3101e8e06d6.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252436901596273,
+                    47.14361233512663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 58,
+            "properties": {
+                "sculptor": "Jakob Probst",
+                "sculpture_name": "Erwachen",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/fba5679be9632e30b641ce2f195bc3101e8e06d6.jpg",
+                    "https://www.publics-arts.ch/files/original/f55cecf85aa3fe68f17f948c89f31aee3c56d2c1.tif"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252436901596273,
+                    47.14361233512663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 59,
+            "properties": {
+                "sculptor": "Hans Arthur Balmer",
+                "sculpture_name": "Die Baumfee und ihre T\u00e4nzerin",
+                "year": "1978",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/9d8e1db2a33e8a53ef31fe854c709537aff272bf.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2411875,
+                    47.137485500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 60,
+            "properties": {
+                "sculptor": "Walter Linck",
+                "sculpture_name": "Piano rhythmique",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/0402554375d57397a484c70a15cec22265ed1c20.jpg"
+                ],
+                "photographer": "Christian Staub, 1954 \u00a9  Fotostiftung Schweiz",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252436901596273,
+                    47.14361233512663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 61,
+            "properties": {
+                "sculptor": "Franz Fischer",
+                "sculpture_name": "Redner",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/2880161270d8ebbc79ba02b6f40ae9fb219e22f2.tif"
+                ],
+                "photographer": "Archives municipales Bienne / Stadtarchiv Biel, Collection de photographies de la police / Polizeifotosammlung, N_701-1-1, 1954",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1435365
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 62,
+            "properties": {
+                "sculptor": "Hans Aeschbacher",
+                "sculpture_name": "Stier",
+                "year": "1947",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/8815470702a97ba7ce509bf1cbce533403d7fd5d.jpg"
+                ],
+                "photographer": "Christian Staub, 1954 \u00a9 Fotostiftung Schweiz; Source / Quelle: Marcel Joray, Schweizer Plastik der Gegenwart, Neuch\u00e2tel: \u00c9ditions du Griffon 1955, Cat. / Kat. 98",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252436901596273,
+                    47.14361233512663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 63,
+            "properties": {
+                "sculptor": "Willy M\u00fcller-Brittnau & Albert Siegenthaler",
+                "sculpture_name": "Drei Rahmen",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/972e3571b0ce3e250d1407c3c1ce15fcf6e03182.jpg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1970",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.236552499999999,
+                    47.1331945
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 64,
+            "properties": {
+                "sculptor": "Ren\u00e9 K\u00fcng",
+                "sculpture_name": "Grosse Mondleiter",
+                "year": "1979\u201380",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/6744d9fa5457a4fca0eb399444024b2db9ef0943.jpeg",
+                    "https://www.publics-arts.ch/files/original/298f2cbb68c44871f9edef08b8987288e60707e3.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1980, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Faubourg du Lac / Seevorstadt, pr\u00e8s du Mus\u00e9e Schwab / beim Museum Schwab, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2410985,
+                    47.138748500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 65,
+            "properties": {
+                "sculptor": "Erwin Rehmann",
+                "sculpture_name": "Organismus",
+                "year": "1952",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/023d54edb4ba7ade8d9320593d6639d24d9cc327.tif"
+                ],
+                "photographer": "Comet Photo AG, 1954, Com_M03-0221-0004, Biblioth\u00e8que ETH Zurich, Archives photographiques / ETH-Bibliothek Z\u00fcrich, Bildarchiv / Public Domain Mark",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252436901596273,
+                    47.14361233512663
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 66,
+            "properties": {
+                "sculptor": "Bernhard Luginb\u00fchl",
+                "sculpture_name": "Matrose",
+                "year": "1978",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/58ebf9299eaff9c549f8d8717706e533a72a2868.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1980",
+                "location": "Parvis du Gymnase Bienne-Seeland / Vorplatz des Gymnasium Biel-Seeland, rue du D\u00e9barcad\u00e8re / L\u00e4ndtestrasse 10, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2356925,
+                    47.132942500000006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 67,
+            "properties": {
+                "sculptor": "Bernhard L\u00fcginb\u00fchl",
+                "sculpture_name": "Atlas",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/e6eec06cdcae3c7f305547bbce50e5382d4b4629.tif",
+                    "https://www.publics-arts.ch/files/original/cc92c91453a9aec5548abcb0d2247afcd9e990e3.tif",
+                    "https://www.publics-arts.ch/files/original/f1234bbd0f2d0d09ad44d3f60687571d1ea9b19c.tif"
+                ],
+                "photographer": "Heinz Baumann, 1970 \u00a9 Biblioth\u00e8que ETH Zurich, Archives photographiques / ETH-Bibliothek Z\u00fcrich, Bildarchiv",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, rue du D\u00e9barcad\u00e8re / L\u00e4ndtestrasse, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2324075,
+                    47.1341975
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 68,
+            "properties": {
+                "sculptor": "Bernhard Luginb\u00fchl",
+                "sculpture_name": "Grosser Boss",
+                "year": "1972\u201375",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/ad9144a689d3333385a4e59d469c6d5d7168575b.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975 \u00a9 Fondation Bernhard Luginb\u00fchl / Bernhard Luginb\u00fchl Stiftung",
+                "location": "\u00c1 l'angle de la Promenade de la Suze et du Faubourg du Lac / Ecke Sch\u00fcsspromenade zu Seevorstadt, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2418115,
+                    47.139137500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 69,
+            "properties": {
+                "sculptor": "Silvio Mattioli",
+                "sculpture_name": "Komposition",
+                "year": "1968\u201369",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/92662634b406f815187a9d8131703e4f946bc219.jpg",
+                    "https://www.publics-arts.ch/files/original/bcd83e8c100138631ed8d45342ed6eeb2f2812be.jpg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1970, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2328244999999995,
+                    47.1338165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 70,
+            "properties": {
+                "sculptor": "Walter Linck",
+                "sculpture_name": "Mobile II",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/3733a9bad9935cf486cca5ec1f393cb3163c2167.jpeg"
+                ],
+                "photographer": "Inconnu / Unbekannt, 1970, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel",
+                "location": "Parc du Palais des Congr\u00e8s / Park des Kongresshauses, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2471255,
+                    47.1343375
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 71,
+            "properties": {
+                "sculptor": "Andr\u00e9 Ramseyer",
+                "sculpture_name": "La Vague",
+                "year": "1957/58",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/9cf566cc4892f377411beac0b989244dd7b08d85.jpg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1958, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252427153717993,
+                    47.14360404744093
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 72,
+            "properties": {
+                "sculptor": "Henri Presset",
+                "sculpture_name": "Figure XIIa",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/fb3103abfe834acc21daf68fd93649164762c8a7.jpg",
+                    "https://www.publics-arts.ch/files/original/8c4b967b747c985b5d93766a59dd55fad369b2c1.jpg"
+                ],
+                "photographer": "Source / Quelle: Jean Mohr, Gazzette de Lausanne, 20.7.1975",
+                "location": "Promenade de la Suze / Sch\u00fcsspromenade, 2502 Biel / Bienne",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2408975,
+                    47.1365825
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 73,
+            "properties": {
+                "sculptor": "Albert Siegenthaler",
+                "sculpture_name": "Dialogue",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/383dfd6063b71f0d724edbab013d0c61008caf7a.jpg",
+                    "https://www.publics-arts.ch/files/original/ea0f1abda80ab9ff1f8cef8a9b50b03d45baf00c.jpeg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1970",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.236552499999999,
+                    47.1331945
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 74,
+            "properties": {
+                "sculptor": "Bernhard Luginb\u00fchl",
+                "sculpture_name": "Grosse Aggression",
+                "year": "1961",
+                "historic_year": "ESS-SPA 3, 1962",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/4b4fa61adb98afff896bb351e05f1a19124ed52c.jpg"
+                ],
+                "photographer": "Fonds Jacques Th\u00e9voz, 1962, Service des biens culturels, Fribourg / Amt f\u00fcr Kulturg\u00fcter, Freiburg, Fonds Recensement des biens culturels Fribourg, RBCF\u00a0",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2322545,
+                    47.133176500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 75,
+            "properties": {
+                "sculptor": "\u00d6d\u00f6n Koch",
+                "sculpture_name": "Zweiteilige Skulptur",
+                "year": "1965/66",
+                "historic_year": "ESS-SPA 4, 1966",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/5ed0b0939bd4868bdca9ee873e9926869e1ae864.jpg",
+                    "https://www.publics-arts.ch/files/original/a05fe888d94613fdfcc9a23730f1eb0aa17beb47.jpg",
+                    "https://www.publics-arts.ch/files/original/de4fa8cfde1f25e8d8fe430f67fe9d4d0365c00b.jpg",
+                    "https://www.publics-arts.ch/files/original/8778b561b9a5ea4aaecd52729b6806a265bb4954.jpg"
+                ],
+                "photographer": "J\u00fcrg Rihs, 1966",
+                "location": "Parc du Palais des Congr\u00e8s / Park des Kongresshauses, 2501 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.247171499999999,
+                    47.1349275
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 76,
+            "properties": {
+                "sculptor": "Angel Duarte",
+                "sculpture_name": "E 7 G",
+                "year": "1964\u201370",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/a15fd768181bdc304b16368629ba5d7910fcd68e.jpg",
+                    "https://www.publics-arts.ch/files/original/cd59e6684c8bc4fa688695604e8dcfe0b2cf5051.tif"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1970",
+                "location": "Pr\u00e9s-de-la-Rive, au bord du lac / Strandboden am Seeufer, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2332785,
+                    47.1324575
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 77,
+            "properties": {
+                "sculptor": "Walter Bodmer",
+                "sculpture_name": "Eisenplastik",
+                "year": "1954",
+                "historic_year": "ESS-SPA 1, 1954",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1feddbfaf9f6f9c7746832045d2d5a99fcbf09f1.png"
+                ],
+                "photographer": "not found",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.252427153717993,
+                    47.14360404744093
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 78,
+            "properties": {
+                "sculptor": "Berner Arbeitsgemeinschaft (Eggenschwiler, Vetter, W\u00e4lti, Kunz)",
+                "sculpture_name": "Moorgarten aus Baumelementen",
+                "year": "1975",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/32321039a97fb9f3a8945f34e8a554c8d7e42c0d.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "APP Bienne-Seeland / BVS Biel Seeland, chemin de la Ciblerie / Scheibenweg 45, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2681575,
+                    47.137775500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 80,
+            "properties": {
+                "sculptor": "Emile Angeloz",
+                "sculpture_name": "\u00c9lement en 3 pi\u00e8ces",
+                "year": "1978",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1feddbfaf9f6f9c7746832045d2d5a99fcbf09f1.png"
+                ],
+                "photographer": "not found",
+                "location": "Faubourg du Lac / Seevorstadt, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2429305,
+                    47.139711500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 81,
+            "properties": {
+                "sculptor": "Hermann Hubacher",
+                "sculpture_name": "Sich k\u00e4mmendes M\u00e4dchen",
+                "year": "1955",
+                "historic_year": "ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1feddbfaf9f6f9c7746832045d2d5a99fcbf09f1.png"
+                ],
+                "photographer": "not found",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1431265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 82,
+            "properties": {
+                "sculptor": "Arnold Huggler",
+                "sculpture_name": "Ours",
+                "year": "1958",
+                "historic_year": " ESS-SPA 2, 1958",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/1feddbfaf9f6f9c7746832045d2d5a99fcbf09f1.png"
+                ],
+                "photographer": "not found",
+                "location": "Coll\u00e8ge des Pr\u00e9s-Ritter / Schulhaus Rittermatte, rue Franche / Freiestrasse 45, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2522315,
+                    47.1431265
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 83,
+            "properties": {
+                "sculptor": "Max Weiss",
+                "sculpture_name": "Kyra \u2013 Grosse Liegende",
+                "year": "1961",
+                "historic_year": "ESS-SPA 3, 1962",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/39a6feb12f9dffc29bb25fad1cb9de8b699a2218.jpg"
+                ],
+                "photographer": "inconnu / unbekannt, 1962, source / Quelle: Marcel Joray, Schweizer Plastik der Gegenwart, Neuch\u00e2tel: \u00c9ditions du Griffon 1967, Cat. / Kat. 507",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2312275,
+                    47.1347505
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 84,
+            "properties": {
+                "sculptor": "\u00d6d\u00f6n Koch",
+                "sculpture_name": "Le Silence",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/24ab976091d66088b6b64c962d93496af3afcb66.png"
+                ],
+                "photographer": "inconnu / unbekannt, 1970, source / Quelle: Marcel Joray, La sculpture moderne en Suisse, Neuch\u00e2tel: \u00c9ditions du Griffon 1989, Cat. / Kat. 30",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2337095,
+                    47.1339775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 85,
+            "properties": {
+                "sculptor": "Paul Talman",
+                "sculpture_name": "Konkaver Wald",
+                "year": "1975/1980",
+                "historic_year": "ESS-SPA 6, 1975 / ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/434afb53ba8a199ffc7cf43c3ad1b15c1e74b455.jpg"
+                ],
+                "photographer": "Source / Quelle: Margrit Baumann, 1980",
+                "location": "Cour int\u00e9rieur de l'\u00e9cole professionnelle Bienne / Innenhof der Gewerbeschule Biel, rue du Wasen / Wasenstrasse 1, 7, 9, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2544527936110486,
+                    47.145411485739935
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 86,
+            "properties": {
+                "sculptor": "Willy Weber",
+                "sculpture_name": "See, O.K.",
+                "year": "1977",
+                "historic_year": "ESS-SPA 7, 1980",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/310916c3f48abd08879a4926138a7e57f4a1d137.jpg",
+                    "https://www.publics-arts.ch/files/original/f7aede42f9a8a95fba1b5c1c55c6b65e6e078f9c.jpg"
+                ],
+                "photographer": "inconnu / unbekannt, 1980, Collection des arts visuels de la Ville de Bienne / Kunstsammlung der Stadt Biel, sans date / ohne Datum",
+                "location": "Faubourg du Lac / Seevorstadt, 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2389385,
+                    47.137594500000006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 87,
+            "properties": {
+                "sculptor": "Peter Travaglini",
+                "sculpture_name": "Haken-Cat",
+                "year": "1974",
+                "historic_year": "ESS-SPA 6, 1975",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/7c76e7c3cd5152e9c2d6aac8195cc59fd2b87f3d.jpg",
+                    "https://www.publics-arts.ch/files/original/de4000dc55bc451106f2097cfdaf319b1a0d2cb9.jpg",
+                    "https://www.publics-arts.ch/files/original/e2daa2897be43b78ed44a8be720d16adc99d6dbb.jpeg"
+                ],
+                "photographer": "Jeanne Chevalier, 1975",
+                "location": "Faubourg du Lac / Seevorstadt (vis-\u00e0-vis Centre d'Art / Kunsthaus PasquArt), 2502 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2406375,
+                    47.138515500000004
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 88,
+            "properties": {
+                "sculptor": "Mariann Grunder",
+                "sculpture_name": "Element A",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/2eab15bd6569cd054eff6f9690e443cd43e75bca.jpg"
+                ],
+                "photographer": "Jeanne Chevalier, 1970",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2322545,
+                    47.133176500000005
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 89,
+            "properties": {
+                "sculptor": "Willy M\u00fcller-Brittnau & Albert Siegenthaler",
+                "sculpture_name": "Grosser Rahmen",
+                "year": "1970",
+                "historic_year": "ESS-SPA 5, 1970",
+                "image": [
+                    "https://www.publics-arts.ch/files/original/56f826e2f30c04568fc81336539c8f983454c472.jpg"
+                ],
+                "photographer": "Archives / Archiv M\u00e4rki-Travaglini, 1970",
+                "location": "Pr\u00e9s-de-la-Rive / Strandboden, 2503 Bienne / Biel",
+                "period": "old"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.2351434999999995,
+                    47.1326485
+                ]
+            }
+        }
+    ]
+}

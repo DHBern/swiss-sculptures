@@ -1,5 +1,8 @@
 <script>
+	import { isMapOChecked, isMapNChecked } from '../store.js';
 	import Map from './Map.svelte';
+	import MapO from './MapOld.svelte';
+	import MapN from './MapNew.svelte';
 	import Swal from 'sweetalert2/dist/sweetalert2.js';
 	import 'sweetalert2/dist/sweetalert2.min.css';
 
@@ -54,7 +57,13 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
 <link rel="stylesheet" href="src/styles.css" />
 <body style="margin: 0; padding: 0; overflow:hidden;">
-	<Map />
+	{#if $isMapOChecked && $isMapNChecked}
+		<Map />
+	{:else if $isMapOChecked && !$isMapNChecked}
+		<MapO />
+	{:else if !$isMapOChecked && $isMapNChecked}
+		<MapN />
+	{/if}
 
 	<!-- Footer/Legend -->
 

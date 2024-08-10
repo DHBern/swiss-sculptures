@@ -79,6 +79,17 @@
 		}
 	}
 
+	function resetZoom() {
+		setTimeout(async () => {
+			const coor = await queryCoordinates(popup_id);
+			// Zoom to fit the clicked point and its corresponding point
+			const padding = { top: 50, bottom: 50, left: 50, right: 50 };
+
+			// Fit the map to the bounding box with the specified padding
+			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
+		}, 500); // Adjust the timeout value as needed
+	}
+
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
@@ -168,10 +179,6 @@
 							const vis = visibility === 'none' ? 'visible' : 'none';
 							map.setLayoutProperty('lines', 'visibility', vis);
 
-							/**
-							 * @type any
-							 */
-							let filteredPoints;
 							setTimeout(async () => {
 								const coor = await queryCoordinates(id);
 								// Zoom to fit the clicked point and its corresponding point
@@ -374,5 +381,7 @@
 		on:showOldPopup={handleShowOldPopup}
 		on:showNewPopup={handleShowNewPopup}
 		{a}
+		on:showNewPopup={resetZoom}
+		on:showOldPopup={resetZoom}
 	/>
 </div>

@@ -82,12 +82,10 @@
 	function resetZoom() {
 		setTimeout(async () => {
 			const coor = await queryCoordinates(popup_id);
-			// Zoom to fit the clicked point and its corresponding point
 			const padding = { top: 50, bottom: 50, left: 50, right: 50 };
 
-			// Fit the map to the bounding box with the specified padding
 			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
-		}, 500); // Adjust the timeout value as needed
+		}, 500);
 	}
 
 	onMount(async () => {
@@ -353,7 +351,8 @@
 					bind:checked={$isMapOChecked}
 					on:click|preventDefault={(event) => handleClick(event, 'MapO')}
 				/>
-				MapO</label
+				seuls emplacements <span style="color: red;">actuels</span> / nur
+				<span style="color: red;">aktuelle</span> Standorte</label
 			>
 
 			<br />
@@ -363,10 +362,13 @@
 					bind:checked={$isMapNChecked}
 					on:click|preventDefault={(event) => handleClick(event, 'MapN')}
 				/>
-				MapN</label
+				seuls emplacements <span style="color: blue;">d'origine</span> / nur
+				<span style="color: blue;">ursprüngliche</span> Standorte</label
 			>
 			<br />
-			<button on:click={resetMap}>Reset Map </button>
+			<button on:click={resetMap} style="width: 100%;"
+				>réinitialiser la carte / Karte zurücksetzen</button
+			>
 		</div>
 	</div>
 </div>

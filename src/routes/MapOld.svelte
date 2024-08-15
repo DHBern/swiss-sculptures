@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import maplibregl from 'maplibre-gl';
 	import Popup from './Popup.svelte';
-	import { queryCoordinates } from '../queryGeoJSON_coordinates';
 	import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
 	import { isMapOChecked, isMapNChecked } from '../store.js';
 

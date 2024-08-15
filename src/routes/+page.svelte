@@ -55,7 +55,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="src/styles.css" />
+<link rel="stylesheet" href="/styles.css" />
 <body style="margin: 0; padding: 0; overflow:hidden;">
 	{#if $isMapOChecked && $isMapNChecked}
 		<Map />

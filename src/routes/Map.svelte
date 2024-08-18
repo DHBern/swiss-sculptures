@@ -111,6 +111,10 @@
 		resetInactivityTimeout();
 	}
 
+	onMount(() => {
+		setupInactivityListeners();
+	});
+
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
@@ -325,9 +329,6 @@
 			map.setLayoutProperty('lines', 'visibility', 'none');
 		}
 	}
-
-	// Setup listeners to reset map on idle
-	setupInactivityListeners();
 
 	// Handle checkbox state changes
 	/**

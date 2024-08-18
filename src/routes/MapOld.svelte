@@ -57,6 +57,29 @@
 		}
 	}
 
+	/**
+	 * @type {number | undefined}
+	 */
+	let inactivityTimeout;
+
+	// Function to reset the inactivity timer
+	function resetInactivityTimeout() {
+		clearTimeout(inactivityTimeout);
+		inactivityTimeout = setTimeout(() => {
+			resetMap();
+		}, 120000); // 120 seconds
+	}
+
+	function setupInactivityListeners() {
+		const events = ['mousemove', 'keydown', 'click', 'scroll'];
+
+		events.forEach((event) => {
+			document.addEventListener(event, resetInactivityTimeout);
+		});
+
+		resetInactivityTimeout();
+	}
+
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
@@ -173,6 +196,8 @@
 			showLeft = false;
 		}
 	}
+	// Setup listeners to reset map on idle
+	setupInactivityListeners();
 
 	// Handle checkbox state changes
 	/**

@@ -81,7 +81,7 @@
 								</a>
 							{/if}
 							<Hr classHr="my-8" />
-							<h4>Künstler*in:</h4>
+							<h4>Artiste / Künstler*in:</h4>
 							<p>
 								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
 							</p>
@@ -89,7 +89,7 @@
 							<h4>Photographe / Fotograf*in:</h4>
 							<p>{queriedFeature.properties.photographer}</p>
 							<Hr classHr="my-8" />
-							<h4>Adresse:</h4>
+							<h4>Lieu / Ort:</h4>
 							<p>{queriedFeature.properties.location}</p>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 								</a>
 							{/if}
 							<Hr classHr="my-8" />
-							<h4>Künstler*in:</h4>
+							<h4>Artiste / Künstler*in:</h4>
 							<p>
 								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
 							</p>
@@ -137,7 +137,7 @@
 							<h4>Photographe / Fotograf*in:</h4>
 							<p>{queriedFeature.properties.photographer}</p>
 							<Hr classHr="my-8" />
-							<h4>Adresse:</h4>
+							<h4>Lieu / Ort:</h4>
 							<p>{queriedFeature.properties.location}</p>
 						</div>
 					</div>

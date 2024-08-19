@@ -8,9 +8,10 @@
 
 	function showPopup() {
 		// @ts-ignore
-		Swal.fire({
+		const swalInstance = Swal.fire({
 			icon: 'info',
 			title: 'Info',
+			timer: 120000,
 			html: `
 				<b>Exposition suisse de sculpture interactive</b> <br>
 				<p>Où les sculptures de l'Exposition suisse de sculpture étaient-elles visibles à l'origine ?

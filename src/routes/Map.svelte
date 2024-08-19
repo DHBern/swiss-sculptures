@@ -98,7 +98,7 @@
 		clearTimeout(inactivityTimeout);
 		inactivityTimeout = setTimeout(() => {
 			resetMap();
-		}, 120000); // 120 seconds
+		}, 3000); // 120 seconds
 	}
 
 	function setupInactivityListeners() {

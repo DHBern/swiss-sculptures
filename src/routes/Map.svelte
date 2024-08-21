@@ -82,7 +82,7 @@
 	function resetZoom() {
 		setTimeout(async () => {
 			const coor = await queryCoordinates(popup_id);
-			const padding = { top: 50, bottom: 50, left: 50, right: 50 };
+			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
 
 			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
 		}, 500);
@@ -207,7 +207,7 @@
 							setTimeout(async () => {
 								const coor = await queryCoordinates(id);
 								// Zoom to fit the clicked point and its corresponding point
-								const padding = { top: 50, bottom: 50, left: 50, right: 50 };
+								const padding = { top: 100, bottom: 50, left: 50, right: 50 };
 
 								// Fit the map to the bounding box with the specified padding
 								map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });

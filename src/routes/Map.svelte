@@ -258,12 +258,12 @@
 
 					const image = JSON.parse(e.features[0].properties.image);
 					const sculpture_name = e.features[0].properties.sculpture_name;
-
+					console.log(image[0].replace(/\/large\//g, '/medium/'));
 					// Create the popup HTML content
 					const popupContent = `
 						<div style="background-color: #d9d9d9; text-align: center;">
 							<div style="display: inline-block; position: relative; max-width: 100%; max-height: 37.035vh; vertical-align: middle;">
-								<img src="${image[0]}" alt="${sculpture_name}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;" />
+								<img src="${image[0].replace(/\/large\//g, '/medium/')}" alt="${sculpture_name}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;" />
 							</div>
 							<p>${sculpture_name}</p>
 						</div>

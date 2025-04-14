@@ -10,6 +10,12 @@ p {
 	font-family: Helvetica, sans-serif;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .grid-container {
 	position: absolute;
 	bottom: 0;

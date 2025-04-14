@@ -54,47 +54,44 @@
 	}
 </script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
 <link rel="stylesheet" href="/styles.css" />
-<body style="margin: 0; padding: 0; overflow:hidden;">
-	{#if $isMapOChecked && $isMapNChecked}
-		<Map />
-	{:else if $isMapOChecked && !$isMapNChecked}
-		<MapO />
-	{:else if !$isMapOChecked && $isMapNChecked}
-		<MapN />
-	{/if}
+{#if $isMapOChecked && $isMapNChecked}
+	<Map />
+{:else if $isMapOChecked && !$isMapNChecked}
+	<MapO />
+{:else if !$isMapOChecked && $isMapNChecked}
+	<MapN />
+{/if}
 
-	<!-- Footer/Legend -->
+<!-- Footer/Legend -->
 
-	<div class="grid-container">
-		<div class="col-auto p">
-			<h1>
-				Exposition suisse de sculpture interactive / Schweizerische Plastikausstellung interaktiv
-			</h1>
-			<h3>
-				Cliquez sur les points et les lignes pour voir plus de détails. / Für mehr Details klicken
-				Sie auf die Punkte und Linien.
-			</h3>
-		</div>
-		<div class="p" style="display:grid;">
-			<div class="line-container">
-				<div><img src="/red.svg" alt="red" class="svg" /></div>
-				<div>
-					<p class="l-text">emplacement d’origine (rouge) / ursprünglicher Standort (rot)</p>
-				</div>
-			</div>
-			<div class="line-container">
-				<div><img src="/blue.svg" alt="blue" class="svg" /></div>
-				<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
-			</div>
-			<button
-				style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
-				onclick={showPopup}
-			>
-				<img src="/info.svg" alt="info" />
-			</button>
-		</div>
+<div class="grid-container">
+	<div class="col-auto p">
+		<h1>
+			Exposition suisse de sculpture interactive / Schweizerische Plastikausstellung interaktiv
+		</h1>
+		<h3>
+			Cliquez sur les points et les lignes pour voir plus de détails. / Für mehr Details klicken Sie
+			auf die Punkte und Linien.
+		</h3>
 	</div>
-</body>
+	<div class="p" style="display:grid;">
+		<div class="line-container">
+			<div><img src="/red.svg" alt="red" class="svg" /></div>
+			<div>
+				<p class="l-text">emplacement d’origine (rouge) / ursprünglicher Standort (rot)</p>
+			</div>
+		</div>
+		<div class="line-container">
+			<div><img src="/blue.svg" alt="blue" class="svg" /></div>
+			<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
+		</div>
+		<button
+			style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
+			onclick={showPopup}
+		>
+			<img src="/info.svg" alt="info" />
+		</button>
+	</div>
+</div>

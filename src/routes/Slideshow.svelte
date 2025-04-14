@@ -1,13 +1,11 @@
 <script>
 	import { onDestroy } from 'svelte';
 
-	/**
-	 * @type {string | any[]}
-	 */
-	export let images = [];
-	export let delay = 3000;
+	
+	/** @type {{images?: string | any[], delay?: number}} */
+	let { images = [], delay = 3000 } = $props();
 
-	let currentIndex = 0;
+	let currentIndex = $state(0);
 
 	function nextSlide() {
 		currentIndex = (currentIndex + 1) % images.length;

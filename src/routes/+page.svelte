@@ -91,7 +91,7 @@
 			</div>
 			<button
 				style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
-				on:click={showPopup}
+				onclick={showPopup}
 			>
 				<img src="/info.svg" alt="info" />
 			</button>

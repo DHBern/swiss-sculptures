@@ -1,25 +1,28 @@
 <script>
+	import { run, preventDefault } from 'svelte/legacy';
+
 	import { queryGeoJSON } from '../queryGeoJSON';
 	import { createEventDispatcher } from 'svelte';
 	import Slideshow from './Slideshow.svelte';
 	import { Hr } from 'flowbite-svelte';
 
-	/**
-	 * @type {number | undefined}
-	 */
-	export let popup_id;
-	export let showLeft = false;
-	export let showRight = false;
-	export let a = false;
+	
+	/** @type {{popup_id: number | undefined, showLeft?: boolean, showRight?: boolean, a?: boolean}} */
+	let {
+		popup_id,
+		showLeft = false,
+		showRight = false,
+		a = false
+	} = $props();
 
 	/**
 	 * @type {import("../queryGeoJSON").GeoJSONFeature[] | { properties: { image: string[]; }; }[]}
 	 */
-	let qf;
+	let qf = $state();
 	/**
 	 * @type any
 	 */
-	let imgElementLeft;
+	let imgElementLeft = $state();
 
 	// Create an event dispatcher
 	const dispatch = createEventDispatcher();
@@ -41,21 +44,23 @@
 	}
 
 	// Fetch queriedFeature whenever popup_id changes
-	$: if (popup_id !== undefined) {
-		(async () => {
-			try {
-				const { queriedFeatures } = await queryGeoJSON(popup_id);
-				qf = queriedFeatures;
-			} catch (error) {
-				console.error('Error querying GeoJSON:', error);
-			}
-		})();
-	}
+	run(() => {
+		if (popup_id !== undefined) {
+			(async () => {
+				try {
+					const { queriedFeatures } = await queryGeoJSON(popup_id);
+					qf = queriedFeatures;
+				} catch (error) {
+					console.error('Error querying GeoJSON:', error);
+				}
+			})();
+		}
+	});
 </script>
 
 {#if showLeft}
 	<div class="left">
-		<button class="close-btn" on:click={closeL}>x</button>
+		<button class="close-btn" onclick={closeL}>x</button>
 		{#if qf}
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'old'}
@@ -72,7 +77,7 @@
 								<a
 									href="none"
 									style="color:black; text-decoration: none;"
-									on:click|preventDefault={showNewPopup}
+									onclick={preventDefault(showNewPopup)}
 								>
 									<span style="font-size: 0.8vw;"
 										>aller à l’emplacement actuel / zum aktuellen Standort</span
@@ -103,7 +108,7 @@
 
 {#if showRight}
 	<div class="right">
-		<button class="close-btn" on:click={closeR}>x</button>
+		<button class="close-btn" onclick={closeR}>x</button>
 		{#if qf}
 			{#each qf as queriedFeature}
 				{#if queriedFeature.properties.period == 'new'}
@@ -120,7 +125,7 @@
 								<a
 									href="none"
 									style="color:black; text-decoration: none;"
-									on:click|preventDefault={showOldPopup}
+									onclick={preventDefault(showOldPopup)}
 								>
 									<span style="color: red;">&#9664;</span>
 									<span style="font-size: 0.8vw;"

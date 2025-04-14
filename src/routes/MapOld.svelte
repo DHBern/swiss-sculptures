@@ -1,4 +1,6 @@
 <script src="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.js">
+	import { preventDefault } from 'svelte/legacy';
+
 	import { onMount } from 'svelte';
 	import maplibregl from 'maplibre-gl';
 	import Popup from './Popup.svelte';
@@ -11,30 +13,25 @@
 	let map;
 
 	/** @type {any} */
-	let popup_id;
+	let popup_id = $state();
 
-	/**
-	 * @type boolean
-	 */
-	export let showLeft = false;
-	/**
-	 * @type boolean
-	 */
-	export let showRight = false;
+	
+	
 
-	export let a = false;
+	/** @type {{showLeft?: boolean, showRight?: boolean, a?: boolean}} */
+	let { showLeft = $bindable(false), showRight = false, a = false } = $props();
 
 	/** @type {string | number | undefined | null} */
 	let hoveredPointId = null;
 
 	// Calculate the width and left values based on the presence of the left and right pop-ups
-	$: mapWidth =
-		showLeft && showRight
+	let mapWidth =
+		$derived(showLeft && showRight
 			? 'calc(100% - 52.08vw)'
 			: showLeft || showRight
 				? 'calc(100% - 26.04vw)'
-				: '100%';
-	$: mapLeft = showLeft ? '26.04vw' : '0';
+				: '100%');
+	let mapLeft = $derived(showLeft ? '26.04vw' : '0');
 
 	// Functions to handle the custom events
 	/**
@@ -248,7 +245,7 @@
 				><input
 					type="checkbox"
 					bind:checked={$isMapOChecked}
-					on:click|preventDefault={(event) => handleClick(event, 'MapO')}
+					onclick={preventDefault((event) => handleClick(event, 'MapO'))}
 				/>
 				seuls emplacements <span style="color: red;">actuels</span> / nur
 				<span style="color: red;">aktuelle</span> Standorte</label
@@ -259,13 +256,13 @@
 				><input
 					type="checkbox"
 					bind:checked={$isMapNChecked}
-					on:click|preventDefault={(event) => handleClick(event, 'MapN')}
+					onclick={preventDefault((event) => handleClick(event, 'MapN'))}
 				/>
 				seuls emplacements <span style="color: blue;">d'origine</span> / nur
 				<span style="color: blue;">ursprüngliche</span> Standorte</label
 			>
 			<br />
-			<button on:click={resetMap} style="width: 100%;"
+			<button onclick={resetMap} style="width: 100%;"
 				>réinitialiser la carte / Karte zurücksetzen</button
 			>
 		</div>

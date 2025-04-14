@@ -1,6 +1,5 @@
-<script src="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.js">
+<script>
 	import { preventDefault } from 'svelte/legacy';
-
 	import { onMount } from 'svelte';
 	import maplibregl from 'maplibre-gl';
 	import Popup from './Popup.svelte';
@@ -16,9 +15,6 @@
 	/** @type {any} */
 	let popup_id = $state();
 
-	
-	
-
 	/** @type {{showLeft?: boolean, showRight?: boolean, a?: boolean}} */
 	let { showLeft = $bindable(false), showRight = $bindable(false), a = true } = $props();
 
@@ -29,12 +25,13 @@
 	let hoveredLineId = null;
 
 	// Calculate the width and left values based on the presence of the left and right pop-ups
-	let mapWidth =
-		$derived(showLeft && showRight
+	let mapWidth = $derived(
+		showLeft && showRight
 			? 'calc(100% - 52.08vw)'
 			: showLeft || showRight
 				? 'calc(100% - 26.04vw)'
-				: '100%');
+				: '100%'
+	);
 	let mapLeft = $derived(showLeft ? '26.04vw' : '0');
 
 	// Functions to handle the custom events
@@ -76,42 +73,6 @@
 		}
 	}
 
-	function resetZoom() {
-		setTimeout(async () => {
-			const coor = await queryCoordinates(popup_id);
-			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
-
-			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
-		}, 500);
-	}
-
-	/**
-	 * @type {number | undefined}
-	 */
-	let inactivityTimeout;
-
-	// Function to reset the inactivity timer
-	function resetInactivityTimeout() {
-		clearTimeout(inactivityTimeout);
-		inactivityTimeout = setTimeout(() => {
-			resetMap();
-		}, 120000); // 120 seconds
-	}
-
-	function setupInactivityListeners() {
-		const events = ['mousemove', 'keydown', 'click', 'scroll'];
-
-		events.forEach((event) => {
-			document.addEventListener(event, resetInactivityTimeout);
-		});
-
-		resetInactivityTimeout();
-	}
-
-	onMount(() => {
-		setupInactivityListeners();
-	});
-
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
@@ -122,10 +83,7 @@
 		map.dragRotate.disable();
 
 		map.on('load', () => {
-			map.addSource('sculptures', {
-				type: 'geojson',
-				data: '/data.geojson'
-			});
+			map.addSource('sculptures', { type: 'geojson', data: '/data.geojson' });
 
 			map.addLayer({
 				id: 'lines',

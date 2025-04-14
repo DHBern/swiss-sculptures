@@ -1,6 +1,6 @@
 # Re/Sculpture Web App
 
-This project is an interactive web application created for the **Re/Sculpture** exhibition at the **Nouveau Musée Bienne (NMB)** in collaboration with the **University of Bern, Institute of Art History**. 
+This project is an interactive web application created for the **Re/Sculpture** exhibition at the **Nouveau Musée Bienne (NMB)** in collaboration with the **University of Bern, Institute of Art History**.
 The application is developed using Svelte, incorporating JavaScript, TypeScript, HTML, and CSS, along with the MapLibre library for enhanced mapping functionalities.
 
 ## Project Structure
@@ -29,6 +29,7 @@ Before you start, ensure you have the following installed:
 Follow these steps to run the project locally:
 
 1. **Clone the repository**:
+
    ```bash
    https://github.com/DHBern/swiss-sculptures.git
    cd swiss-sculptures
@@ -42,7 +43,7 @@ Follow these steps to run the project locally:
    ```bash
    npm run build
    ```
-1. **Run the project**:
+4. **Run the project**:
    ```bash
    node build
    ```

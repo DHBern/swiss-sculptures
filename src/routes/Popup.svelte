@@ -6,14 +6,8 @@
 	import Slideshow from './Slideshow.svelte';
 	import { Hr } from 'flowbite-svelte';
 
-	
 	/** @type {{popup_id: number | undefined, showLeft?: boolean, showRight?: boolean, a?: boolean}} */
-	let {
-		popup_id,
-		showLeft = false,
-		showRight = false,
-		a = false
-	} = $props();
+	let { popup_id, showLeft = false, showRight = false, a = false } = $props();
 
 	/**
 	 * @type {import("../queryGeoJSON").GeoJSONFeature[] | { properties: { image: string[]; }; }[]}

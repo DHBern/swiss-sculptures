@@ -1,7 +1,6 @@
 <script>
 	import { onDestroy } from 'svelte';
 
-	
 	/** @type {{images?: string | any[], delay?: number}} */
 	let { images = [], delay = 3000 } = $props();
 

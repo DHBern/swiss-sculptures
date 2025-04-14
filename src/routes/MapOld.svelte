@@ -102,8 +102,6 @@
 			});
 
 			map.on('mouseenter', 'points', (e) => {
-				console.log('hovering...');
-				console.log(e.lngLat);
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
 					hoveredPointId = e.features[0].id;
@@ -140,8 +138,6 @@
 						.setLngLat(coordinatesArray)
 						.setHTML(popupContent)
 						.addTo(map);
-
-					console.log(popup.getLngLat());
 				}
 			});
 

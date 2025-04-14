@@ -200,8 +200,6 @@
 			});
 
 			map.on('mouseenter', 'points', (e) => {
-				console.log('hovering...');
-				console.log(e.lngLat);
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
 					hoveredPointId = e.features[0].id;
@@ -213,7 +211,6 @@
 
 					const image = JSON.parse(e.features[0].properties.image);
 					const sculpture_name = e.features[0].properties.sculpture_name;
-					console.log(image[0].replace(/\/large\//g, '/medium/'));
 					// Create the popup HTML content
 					const popupContent = `
 						<div style="background-color: #d9d9d9; text-align: center;">
@@ -238,8 +235,6 @@
 						.setLngLat(coordinatesArray)
 						.setHTML(popupContent)
 						.addTo(map);
-
-					console.log(popup.getLngLat());
 				}
 			});
 

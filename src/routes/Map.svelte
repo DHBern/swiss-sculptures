@@ -34,6 +34,15 @@
 	);
 	let mapLeft = $derived(showLeft ? '26.04vw' : '0');
 
+	function resetZoom() {
+		setTimeout(async () => {
+			const coor = await queryCoordinates(popup_id);
+			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
+
+			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
+		}, 500);
+	}
+
 	// Functions to handle the custom events
 	/**
 	 * @param {{ detail: any; }} event

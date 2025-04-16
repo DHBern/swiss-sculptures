@@ -1,5 +1,5 @@
 <script>
-	import { base } from 'degit/dist/index-26d8486e';
+	import { base } from '$app/paths';
 	import { onDestroy } from 'svelte';
 
 	/** @type {{images?: string | any[], delay?: number}} */

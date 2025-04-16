@@ -1,4 +1,5 @@
 <script>
+	import { base } from 'degit/dist/index-26d8486e';
 	import { onDestroy } from 'svelte';
 
 	/** @type {{images?: string | any[], delay?: number}} */
@@ -21,7 +22,7 @@
 	{#if images.length === 0}
 		<div class="slide-container active">
 			<img
-				src="/default-img.png"
+				src="{base}/default-img.png"
 				alt="Sculptures"
 				style=" max-width: 100%; max-height: 100%; object-fit: cover;"
 			/>

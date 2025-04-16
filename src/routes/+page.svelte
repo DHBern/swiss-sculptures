@@ -5,6 +5,7 @@
 	import MapN from './MapNew.svelte';
 	import Swal from 'sweetalert2/dist/sweetalert2.js';
 	import 'sweetalert2/dist/sweetalert2.min.css';
+	import { base } from '$app/paths';
 
 	function showPopup() {
 		// @ts-ignore
@@ -44,7 +45,7 @@
 					Zeidan (DH), Nicolas Gränacher (IKG), Dr. Yvonne Schweizer (IKG)
 				</i><br>
 				<div class="logo-container">
-					<img src="/logo.jpg" class="logo"><img src="unibe_logo.png" class="logo"><img src="SNF_logo_standard_web_color_pos_e.png" class="logo">
+					<img src="${base}/logo.jpg" class="logo"><img src="${base}unibe_logo.png" class="logo"><img src="${base}SNF_logo_standard_web_color_pos_e.png" class="logo">
 				</div>
 			`,
 			width: '50%',
@@ -55,7 +56,7 @@
 </script>
 
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="{base}/styles.css" />
 {#if $isMapOChecked && $isMapNChecked}
 	<Map />
 {:else if $isMapOChecked && !$isMapNChecked}
@@ -78,20 +79,20 @@
 	</div>
 	<div class="p" style="display:grid;">
 		<div class="line-container">
-			<div><img src="/red.svg" alt="red" class="svg" /></div>
+			<div><img src="{base}/red.svg" alt="red" class="svg" /></div>
 			<div>
 				<p class="l-text">emplacement d’origine (rouge) / ursprünglicher Standort (rot)</p>
 			</div>
 		</div>
 		<div class="line-container">
-			<div><img src="/blue.svg" alt="blue" class="svg" /></div>
+			<div><img src="{base}/blue.svg" alt="blue" class="svg" /></div>
 			<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
 		</div>
 		<button
 			style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
 			onclick={showPopup}
 		>
-			<img src="/info.svg" alt="info" />
+			<img src="{base}/info.svg" alt="info" />
 		</button>
 	</div>
 </div>

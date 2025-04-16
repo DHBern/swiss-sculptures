@@ -35,6 +35,7 @@
 	let mapLeft = $derived(showLeft ? '26.04vw' : '0');
 
 	function resetZoom() {
+		console.log('Resetting zoom...');
 		setTimeout(async () => {
 			const coor = await queryCoordinates(popup_id);
 			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
@@ -172,9 +173,11 @@
 								const coor = await queryCoordinates(id);
 								// Zoom to fit the clicked point and its corresponding point
 								const padding = { top: 100, bottom: 50, left: 50, right: 50 };
-
+								const bounds = new maplibregl.LngLatBounds();
+								bounds.extend([coor.arr[0], coor.arr[1]]); // Add the clicked point to the bounds
+								bounds.extend([coor.arr[2], coor.arr[3]]); // Add the corresponding point to the bounds
 								// Fit the map to the bounding box with the specified padding
-								map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
+								map.fitBounds(bounds, { padding, linear: false, animate: true, duration: 3000 });
 							}, 500); // Adjust the timeout value as needed
 						});
 					}

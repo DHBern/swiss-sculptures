@@ -1,9 +1,11 @@
+import { base } from '$app/paths';
+
 export async function queryCoordinates(
 	id: number | string | undefined
 ): Promise<{ arr: [number, number, number, number] }> {
 	try {
 		// Fetch the GeoJSON file
-		const response = await fetch('/data.geojson');
+		const response = await fetch(`${base}/data.geojson`);
 		if (!response.ok) {
 			throw new Error('Failed to fetch GeoJSON file');
 		}

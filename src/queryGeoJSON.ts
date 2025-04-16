@@ -1,3 +1,5 @@
+import { base } from '$app/paths';
+
 export type GeoJSONFeature = {
 	properties: any;
 	id: number;
@@ -9,7 +11,7 @@ export type GeoJSONFeature = {
 export async function queryGeoJSON(id: number): Promise<{ queriedFeatures: GeoJSONFeature[] }> {
 	try {
 		// Fetch the GeoJSON file
-		const response = await fetch('/data.geojson');
+		const response = await fetch(`${base}/data.geojson`);
 		if (!response.ok) {
 			throw new Error('Failed to fetch GeoJSON file');
 		}

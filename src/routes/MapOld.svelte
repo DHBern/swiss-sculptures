@@ -5,6 +5,7 @@
 	import Popup from './Popup.svelte';
 	import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
 	import { isMapOChecked, isMapNChecked } from '../store.js';
+	import { base } from '$app/paths';
 
 	/**
 	 * @type {maplibregl.Map}
@@ -61,7 +62,7 @@
 		map.dragRotate.disable();
 
 		map.on('load', () => {
-			map.addSource('sculptures', { type: 'geojson', data: '/old_points.geojson' });
+			map.addSource('sculptures', { type: 'geojson', data: `${base}/new_points.geojson` });
 
 			map.addLayer({
 				id: 'points',

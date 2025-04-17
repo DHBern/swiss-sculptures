@@ -62,7 +62,7 @@
 		map.dragRotate.disable();
 
 		map.on('load', () => {
-			map.addSource('sculptures', { type: 'geojson', data: `${base}/new_points.geojson` });
+			map.addSource('sculptures', { type: 'geojson', data: `${base}/old_points.geojson` });
 
 			map.addLayer({
 				id: 'points',

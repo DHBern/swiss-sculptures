@@ -211,8 +211,8 @@
 					bind:checked={$isMapOChecked}
 					onclick={preventDefault((event) => handleClick(event, 'MapO'))}
 				/>
-				seuls emplacements <span style="color: red;">actuels</span> / nur
-				<span style="color: red;">aktuelle</span> Standorte</label
+				seuls emplacements <span style="color: red;">d'origine</span> / nur
+				<span style="color: red;">ursprüngliche</span> Standorte</label
 			>
 
 			<br />
@@ -222,8 +222,8 @@
 					bind:checked={$isMapNChecked}
 					onclick={preventDefault((event) => handleClick(event, 'MapN'))}
 				/>
-				seuls emplacements <span style="color: blue;">d'origine</span> / nur
-				<span style="color: blue;">ursprüngliche</span> Standorte</label
+				seuls emplacements <span style="color: blue;">actuels</span> / nur
+				<span style="color: blue;">aktuelle</span> Standorte</label
 			>
 			<br />
 			<button onclick={resetMap} style="width: 100%;"

@@ -31,7 +31,7 @@
 	{#each images as image, index}
 		{#if image && image !== ''}
 			<div class="slide-container {index === currentIndex ? 'active' : ''}">
-				<img src="{base}{image}" alt="Sculptures" class="slide" />
+				<img src={image} alt="Sculptures" class="slide" />
 			</div>
 		{/if}
 	{/each}

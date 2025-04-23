@@ -5,14 +5,14 @@
 	import Popup from './Popup.svelte';
 	import { queryCoordinates } from '../queryGeoJSON_coordinates';
 	// import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
-	import { isMapOChecked, isMapNChecked } from '../store.js';
 	import { base } from '$app/paths';
 
 
 	let map;
+	let checkedShowHist = $state(true);
+	let checkedShowToday = $state(true);
 	let showLeft = $state(false);
 	let showRight = $state(false);
-	$inspect(showLeft, showRight)
 
 	let popup_id = $state();
 	let { metadata } = $props();
@@ -64,28 +64,35 @@
 				layout: {
 					visibility: 'none' // Initially hidden
 				},
-				filter: ['==', '$type', 'LineString']
+				filter: ['==', ['get', 'today_hist'], 'line']
 			});
 
+
 			map.addLayer({
-				id: 'points',
+				id: 'hist-points',
 				type: 'circle',
 				source: 'sculptures',
 				paint: {
 					'circle-radius': 6,
-					'circle-color': [
-						'match',
-						['get', 'today_hist'],
-						'hist',
-						'#FF0000', // red
-						'today',
-						'#0000FF', // blue
-						'#000000' // default to black
-					],
+					'circle-color': '#FF0000', // red
 					'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2, 0],
 					'circle-stroke-color': '#FFFF00' // Highlight color
 				},
-				filter: ['==', '$type', 'Point']
+				filter: ['==', ['get', 'today_hist'], 'hist']
+
+			});
+			map.addLayer({
+				id: 'today-points',
+				type: 'circle',
+				source: 'sculptures',
+				paint: {
+					'circle-radius': 6,
+					'circle-color': '#0000FF', // blue
+					'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2, 0],
+					'circle-stroke-color': '#FFFF00' // Highlight color
+				},
+				filter: ['==', ['get', 'today_hist'], 'today']
+
 			});
 			let popup = new maplibregl.Popup({
 				closeButton: false,
@@ -93,9 +100,9 @@
 				maxWidth: 'none'
 			});
 
-			map.on('click', 'points', (e) => {
+			function handlePointClicked(e) {
 				const features = map.queryRenderedFeatures(e.point, {
-					layers: ['points']
+					layers: ['hist-points', 'today-points']
 				});
 				if (features.length > 0) {
 					const id = features[0].id;
@@ -131,11 +138,15 @@
 						});
 					}
 				}
-			});
+			};
+
+			map.on('click', 'today-points', (e)=>{handlePointClicked(e)})
+			map.on('click', 'hist-points', (e)=>{handlePointClicked(e)})
+			
 			map.on('click', 'lines', async (e) => {
 				const features = map.queryRenderedFeatures(e.point, { layers: ['lines'] });
 				if (features.length) {
-					const id = features[0].id;
+					const id = features[0].properties.id;
 					popup_id = id;
 
 					// Toggle both left and right popups
@@ -156,7 +167,7 @@
 				}
 			});
 
-			map.on('mouseenter', 'points', (e) => {
+			function handleMouseEnter(e) {
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
 					const coordinates = e.lngLat;
@@ -195,18 +206,23 @@
 						.setHTML(popupContent)
 						.addTo(map);
 				}
-			});
+			};
 
-			map.on('mouseleave', 'points', (e) => {
+			function handleMouseLeave(e) {
 				map.getCanvas().style.cursor = '';
 				hoveredPointId = null;
 				popup.remove();
-			});
+			};
+
+			map.on('mouseenter', 'today-points', (e) => {handleMouseEnter(e)});
+			map.on('mouseenter', 'hist-points', (e) => {handleMouseEnter(e)});
+			map.on('mouseleave', 'today-points', (e) => {handleMouseLeave(e)});
+			map.on('mouseleave', 'hist-points', (e) => {handleMouseLeave(e)});
 
 			map.on('mouseenter', 'lines', (e) => {
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
-					hoveredLineId = e.features[0].id;
+					hoveredLineId = e.features[0].properties.id;
 					if (hoveredLineId !== null) {
 						map.setFeatureState({ source: 'sculptures', id: hoveredLineId }, { hover: false });
 					}
@@ -244,39 +260,44 @@
 		}
 	}
 
+	$effect(()=>{
+		checkedShowHist = checkedShowHist;
+		checkedShowToday = checkedShowToday;
+		if (map && map.loaded()){
+			map.setLayoutProperty('hist-points', 'visibility', checkedShowHist ? 'visible' : 'none');
+			map.setLayoutProperty('today-points', 'visibility', checkedShowToday ? 'visible' : 'none');
+		}
+	})
+
 	// Handle checkbox state changes
-	/**
-	 * @param {MouseEvent & { currentTarget: EventTarget & HTMLInputElement; }} event
-	 * @param {string} checkboxName
-	 */
-	function handleInputClick(event, checkboxName) {
-		// Ensure that event.target is an HTMLInputElement
-		const target = event.target;
+	function handleInputClick(ev, checkboxName) {
+		// Ensure that ev.target is an HTMLInputElement
+		const target = ev.target;
 		if (target instanceof HTMLInputElement) {
 			const isCurrentlyChecked = target.checked;
 
 			// Prevent unchecking if it's the only checkbox checked
 			if (!isCurrentlyChecked) {
-				if (checkboxName === 'MapO') {
-					// If MapO is being unchecked, ensure MapN is checked
-					if (!$isMapNChecked) {
-						event.preventDefault(); // Prevent the checkbox from being unchecked
+				if (checkboxName === 'hist') {
+					// If hist is being unchecked, ensure today is checked
+					if (!checkedShowHist) {
+						ev.preventDefault(); // Prevent the checkbox from being unchecked
 						return;
 					}
-				} else if (checkboxName === 'MapN') {
-					// If MapN is being unchecked, ensure MapO is checked
-					if (!$isMapOChecked) {
-						event.preventDefault(); // Prevent the checkbox from being unchecked
+				} else if (checkboxName === 'today') {
+					// If today is being unchecked, ensure hist is checked
+					if (!checkedShowToday) {
+						ev.preventDefault(); // Prevent the checkbox from being unchecked
 						return;
 					}
 				}
 			}
 
-			// Update store based on the checkbox being clicked
-			if (checkboxName === 'MapO') {
-				isMapOChecked.set(isCurrentlyChecked ? true : false);
-			} else if (checkboxName === 'MapN') {
-				isMapNChecked.set(isCurrentlyChecked ? true : false);
+			// Update based on the checkbox being clicked
+			if (checkboxName === 'hist') {
+				checkedShowToday = isCurrentlyChecked ? true : false;
+			} else if (checkboxName === 'today') {
+				checkedShowHist = isCurrentlyChecked ? true : false;
 			}
 		}
 	}
@@ -290,8 +311,8 @@
 			<label
 				><input
 					type="checkbox"
-					bind:checked={$isMapOChecked}
-					onclick={preventDefault((event) => handleInputClick(event, 'MapO'))}
+					bind:checked={checkedShowToday}
+					onclick={(ev) => handleInputClick(ev, 'hist')}
 				/>
 				seuls emplacements <span style="color: red;">d'origine</span> / nur
 				<span style="color: red;">ursprüngliche</span> Standorte</label
@@ -301,8 +322,8 @@
 			<label
 				><input
 					type="checkbox"
-					bind:checked={$isMapNChecked}
-					onclick={preventDefault((event) => handleInputClick(event, 'MapN'))}
+					bind:checked={checkedShowHist}
+					onclick={(ev) => handleInputClick(ev, 'today')}
 				/>
 				seuls emplacements <span style="color: blue;">actuels</span> / nur
 				<span style="color: blue;">aktuelle</span> Standorte</label

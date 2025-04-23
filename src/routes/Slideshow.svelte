@@ -2,7 +2,6 @@
 	import { base } from '$app/paths';
 	import { onDestroy } from 'svelte';
 
-	/** @type {{images?: string | any[], delay?: number}} */
 	let { images = [], delay = 3000 } = $props();
 
 	let currentIndex = $state(0);
@@ -24,15 +23,17 @@
 			<img
 				src="{base}/default-img.png"
 				alt="Sculptures"
-				style=" max-width: 100%; max-height: 100%; object-fit: cover;"
+				style="max-width: 100%; max-height: 100%; object-fit: cover;"
 			/>
 		</div>
 	{/if}
 	{#each images as image, index}
-		{#if image && image !== ''}
 			<div class="slide-container {index === currentIndex ? 'active' : ''}">
-				<img src={image} alt="Sculptures" class="slide" />
+				<img src={image.image_url} alt="Sculptures" class="slide" />
 			</div>
-		{/if}
+				<p>
+					<span style="font-weight: bold;">Photographe / Fotograf*in:</span>
+					{image.image_credits}
+				</p>
 	{/each}
 </div>

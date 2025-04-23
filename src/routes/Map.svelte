@@ -8,21 +8,21 @@
 	import { isMapOChecked, isMapNChecked } from '../store.js';
 	import { base } from '$app/paths';
 
-	/**
-	 * @type {maplibregl.Map}
-	 */
+
 	let map;
+	let showLeft = $state(false);
+	let showRight = $state(false);
+	$inspect(showLeft, showRight)
 
-	/** @type {any} */
 	let popup_id = $state();
+	let { metadata } = $props();
+	
+	let mdrow = $derived.by(()=>{
+		const idx = metadata.findIndex((m) => m.id === popup_id);
+		return(metadata[idx]);
+	})
 
-	/** @type {{showLeft?: boolean, showRight?: boolean, a?: boolean}} */
-	let { showLeft = $bindable(false), showRight = $bindable(false), a = true } = $props();
-
-	/** @type {string | number | undefined | null} */
 	let hoveredPointId = null;
-
-	/** @type {string | number | undefined | null} */
 	let hoveredLineId = null;
 
 	// Calculate the width and left values based on the presence of the left and right pop-ups
@@ -35,55 +35,6 @@
 	);
 	let mapLeft = $derived(showLeft ? '26.04vw' : '0');
 
-	function resetZoom() {
-		console.log('Resetting zoom...');
-		setTimeout(async () => {
-			const coor = await queryCoordinates(popup_id);
-			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
-
-			map.fitBounds(coor.arr, { padding, linear: false, animate: true, duration: 3000 });
-		}, 500);
-	}
-
-	// Functions to handle the custom events
-	/**
-	 * @param {{ detail: any; }} event
-	 */
-	function handleCloseL(event) {
-		// Retrieve the value of showLeft from the event
-		const sl = event.detail;
-		showLeft = sl;
-	}
-
-	/**
-	 * @param {{ detail: any; }} event
-	 */
-	function handleCloseR(event) {
-		// Retrieve the value of showLeft from the event
-		const sr = event.detail;
-		showRight = sr;
-	}
-	/**
-	 * @param {{ detail: { id: any; }; }} event
-	 */
-	function handleShowOldPopup(event) {
-		const id = event.detail.id;
-		if (id !== undefined) {
-			popup_id = id;
-			showLeft = true;
-		}
-	}
-	/**
-	 * @param {{ detail: { id: any; }; }} event
-	 */
-	function handleShowNewPopup(event) {
-		const id = event.detail.id;
-		if (id !== undefined) {
-			popup_id = id;
-			showRight = true;
-		}
-	}
-
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
@@ -95,7 +46,7 @@
 		map.dragRotate.disable();
 
 		map.on('load', () => {
-			map.addSource('sculptures', { type: 'geojson', data: `${base}/data.geojson` });
+			map.addSource('sculptures', { type: 'geojson', data: `${base}/features.geojson` });
 
 			map.addLayer({
 				id: 'lines',
@@ -124,11 +75,11 @@
 					'circle-radius': 6,
 					'circle-color': [
 						'match',
-						['get', 'period'],
-						'old',
-						'#FF0000', // red for old
-						'new',
-						'#0000FF', // blue for new
+						['get', 'today_hist'],
+						'hist',
+						'#FF0000', // red
+						'today',
+						'#0000FF', // blue
 						'#000000' // default to black
 					],
 					'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2, 0],
@@ -143,44 +94,40 @@
 			});
 
 			map.on('click', 'points', (e) => {
-				const features = map.queryRenderedFeatures(e.point, { layers: ['points'] });
-				if (features.length) {
-					const clickedFeature = features[0];
-					const id = clickedFeature.id;
-					popup_id = id;
+				const features = map.queryRenderedFeatures(e.point, {
+					layers: ['points']
+				});
+				if (features.length > 0) {
+					const id = features[0].id;
+					popup_id = features[0].properties.id;
 
 					// Open Popups
-					if (clickedFeature.properties.period == 'new') {
-						showLeft = false;
-						showRight = true;
-					} else if (clickedFeature.properties.period == 'old') {
-						showRight = false;
-						showLeft = true;
+					switch (features[0].properties.today_hist) {
+						case 'today':
+							showLeft = false;
+							showRight = true;
+							break;
+						case 'hist':
+							showRight = false;
+							showLeft = true;
+							break;
 					}
 					// Draw line and zoom
-					const sculpture = clickedFeature.properties.sculpture_name;
 					if (id !== undefined) {
 						map.once('render', () => {
 							// Turn the previous filter to none
 							map.setLayoutProperty('lines', 'visibility', 'none');
 
 							// Turn the filter at the clicked point to the opposite state
-							map.setFilter('lines', ['==', ['get', 'sculpture_name'], sculpture]);
+							map.setFilter('lines', ['==', ['get', 'id'], id]);
 
-							const visibility = map.getLayoutProperty('lines', 'visibility');
-							const vis = visibility === 'none' ? 'visible' : 'none';
-							map.setLayoutProperty('lines', 'visibility', vis);
+							let visibility = map.getLayoutProperty('lines', 'visibility');
+							visibility = visibility === 'none' ? 'visible' : 'none';
+							map.setLayoutProperty('lines', 'visibility', visibility);
 
 							setTimeout(async () => {
-								const coor = await queryCoordinates(id);
-								// Zoom to fit the clicked point and its corresponding point
-								const padding = { top: 100, bottom: 50, left: 50, right: 50 };
-								const bounds = new maplibregl.LngLatBounds();
-								bounds.extend([coor.arr[0], coor.arr[1]]); // Add the clicked point to the bounds
-								bounds.extend([coor.arr[2], coor.arr[3]]); // Add the corresponding point to the bounds
-								// Fit the map to the bounding box with the specified padding
-								map.fitBounds(bounds, { padding, linear: false, animate: true, duration: 3000 });
-							}, 500); // Adjust the timeout value as needed
+								resetZoom()
+							}, 500);
 						});
 					}
 				}
@@ -188,8 +135,7 @@
 			map.on('click', 'lines', async (e) => {
 				const features = map.queryRenderedFeatures(e.point, { layers: ['lines'] });
 				if (features.length) {
-					const clickedFeature = features[0];
-					const id = clickedFeature.id;
+					const id = features[0].id;
 					popup_id = id;
 
 					// Toggle both left and right popups
@@ -199,12 +145,9 @@
 					// Toggle line color between original and highlighted
 					const isHighlighted = map.getFeatureState({
 						source: 'sculptures',
-						id: clickedFeature.id
+						id: id
 					}).hover;
-					map.setFeatureState(
-						{ source: 'sculptures', id: clickedFeature.id },
-						{ hover: !isHighlighted }
-					);
+					map.setFeatureState({ source: 'sculptures', id: id }, { hover: !isHighlighted });
 
 					// Panning feature
 					const coor = await queryCoordinates(id);
@@ -216,25 +159,27 @@
 			map.on('mouseenter', 'points', (e) => {
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
-					hoveredPointId = e.features[0].id;
 					const coordinates = e.lngLat;
 					/**
 					 * @type [number, number]
 					 */
 					const coordinatesArray = [coordinates.lng, coordinates.lat];
-
-					const image = JSON.parse(e.features[0].properties.image);
-					const sculpture_name = e.features[0].properties.sculpture_name;
+					const id = e.features[0].properties.id;
+					const idx = metadata.findIndex((m) => m.id === id);
+					let image = metadata[idx].images_hist[0].image_url;
+					image = image.replace(/\/large\//g, '/medium/');
+					const name = metadata[idx].title;
 					// Create the popup HTML content
 					const popupContent = `
-						<div style="background-color: #d9d9d9; text-align: center;">
-							<div style="display: inline-block; position: relative; max-width: 100%; max-height: 37.035vh; vertical-align: middle;">
-								<img src="${image[0].replace(/\/large\//g, '/medium/')}" alt="${sculpture_name}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;" />
-							</div>
-							<p>${sculpture_name}</p>
+					<div style="background-color: #d9d9d9; text-align: center;">
+						<div style="display: inline-block; position: relative; max-width: 100%; max-height: 37.035vh; vertical-align: middle;">
+							<img src="${image}" alt="${name}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;" />
 						</div>
+						<p>${name}</p>
+					</div>
 					`;
 
+					hoveredPointId = e.features[0].properties.id;
 					if (hoveredPointId !== null) {
 						map.setFeatureState({ source: 'sculptures', id: hoveredPointId }, { hover: false });
 					}
@@ -252,14 +197,9 @@
 				}
 			});
 
-			map.on('mouseleave', 'points', () => {
+			map.on('mouseleave', 'points', (e) => {
 				map.getCanvas().style.cursor = '';
-				if (hoveredPointId !== null) {
-					map.setFeatureState({ source: 'sculptures', id: hoveredPointId }, { hover: false });
-				}
 				hoveredPointId = null;
-
-				// Remove the popup
 				popup.remove();
 			});
 
@@ -281,9 +221,19 @@
 				}
 				hoveredLineId = null;
 			});
+			
 		});
 	});
 
+	function resetZoom() {
+		console.log('Resetting zoom...');
+		setTimeout(() => {
+			const bbox = [mdrow.lon_today, mdrow.lat_today, mdrow.lon_hist, mdrow.lat_hist]
+			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
+			map.fitBounds(bbox, { padding, linear: false, animate: true, duration: 3000 });
+		}, 500);
+	}
+	
 	function resetMap() {
 		if (map) {
 			map.setCenter([7.25, 47.15]);
@@ -299,7 +249,7 @@
 	 * @param {MouseEvent & { currentTarget: EventTarget & HTMLInputElement; }} event
 	 * @param {string} checkboxName
 	 */
-	function handleClick(event, checkboxName) {
+	function handleInputClick(event, checkboxName) {
 		// Ensure that event.target is an HTMLInputElement
 		const target = event.target;
 		if (target instanceof HTMLInputElement) {
@@ -341,7 +291,7 @@
 				><input
 					type="checkbox"
 					bind:checked={$isMapOChecked}
-					onclick={preventDefault((event) => handleClick(event, 'MapO'))}
+					onclick={preventDefault((event) => handleInputClick(event, 'MapO'))}
 				/>
 				seuls emplacements <span style="color: red;">d'origine</span> / nur
 				<span style="color: red;">ursprüngliche</span> Standorte</label
@@ -352,7 +302,7 @@
 				><input
 					type="checkbox"
 					bind:checked={$isMapNChecked}
-					onclick={preventDefault((event) => handleClick(event, 'MapN'))}
+					onclick={preventDefault((event) => handleInputClick(event, 'MapN'))}
 				/>
 				seuls emplacements <span style="color: blue;">actuels</span> / nur
 				<span style="color: blue;">aktuelle</span> Standorte</label
@@ -366,16 +316,11 @@
 </div>
 
 <div>
-	<Popup
-		on:closeL={handleCloseL}
-		on:closeR={handleCloseR}
-		{popup_id}
-		{showLeft}
-		{showRight}
-		on:showOldPopup={handleShowOldPopup}
-		on:showNewPopup={handleShowNewPopup}
-		{a}
-		on:showNewPopup={resetZoom}
-		on:showOldPopup={resetZoom}
-	/>
+	{#if showLeft}
+		<Popup {metadata} bind:popup_id side="left" bind:showLeft bind:showRight {resetZoom}/>
+	{/if}
+
+	{#if showRight}
+		<Popup {metadata} bind:popup_id side="right" bind:showLeft bind:showRight {resetZoom}/>
+	{/if}
 </div>

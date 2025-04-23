@@ -1,149 +1,113 @@
 <script>
-	import { run, preventDefault } from 'svelte/legacy';
-
-	import { queryGeoJSON } from '../queryGeoJSON';
-	import { createEventDispatcher } from 'svelte';
 	import Slideshow from './Slideshow.svelte';
 	import { Hr } from 'flowbite-svelte';
 
-	/** @type {{popup_id: number | undefined, showLeft?: boolean, showRight?: boolean, a?: boolean}} */
-	let { popup_id, showLeft = false, showRight = false, a = false } = $props();
+	let {
+		metadata,
+		popup_id = $bindable(),
+		side,
+		showLeft = $bindable(false),
+		showRight = $bindable(false),
+		resetZoom
+	} = $props();
 
-	/**
-	 * @type {import("../queryGeoJSON").GeoJSONFeature[] | { properties: { image: string[]; }; }[]}
-	 */
-	let qf = $state();
-	/**
-	 * @type any
-	 */
-	let imgElementLeft = $state();
 
-	// Create an event dispatcher
-	const dispatch = createEventDispatcher();
+	const idx = metadata.findIndex((m) => m.id === popup_id);
+	const mdrow = metadata[idx];
 
-	// Close left
 	function closeL() {
-		dispatch('closeL', false);
+		showLeft = false;
 	}
 
-	// Close Right
 	function closeR() {
-		dispatch('closeR', false);
-	}
-	function showOldPopup() {
-		dispatch('showOldPopup', { id: popup_id });
-	}
-	function showNewPopup() {
-		dispatch('showNewPopup', { id: popup_id });
+		// Retrieve the value of showLeft from the event
+		showRight = false;
 	}
 
-	// Fetch queriedFeature whenever popup_id changes
-	run(() => {
-		if (popup_id !== undefined) {
-			(async () => {
-				try {
-					const { queriedFeatures } = await queryGeoJSON(popup_id);
-					qf = queriedFeatures;
-				} catch (error) {
-					console.error('Error querying GeoJSON:', error);
-				}
-			})();
+	function showOtherPopup(id, which) {
+		if (id !== undefined) {
+			popup_id = id;
+			if (which === 'left') {
+				showLeft = true;
+			} else if (which === 'right') {
+				showRight = true;
+			}
+			// resetZoom();
 		}
-	});
+	}
+
+	let class_side = '';
+	let style_side = '';
+	let close_fun;
+	let images_key = '';
+	switch (side) {
+		case 'left':
+			class_side = 'left';
+			style_side =
+				'position: relative; overflow: hidden; height: 37.035vh; width: auto; max-height: 37.035vh; border-style: solid; border-color:red;';
+			close_fun = closeL;
+			images_key = 'images_hist';
+			break;
+		case 'right':
+			class_side = 'right';
+			style_side =
+				'position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh; border-style: solid; border-color:blue;';
+			close_fun = closeR;
+			images_key = 'images_today';
+			break;
+	}
 </script>
 
-{#if showLeft}
-	<div class="left">
-		<button class="close-btn" onclick={closeL}>x</button>
-		{#if qf}
-			{#each qf as queriedFeature}
-				{#if queriedFeature.properties.period == 'old'}
-					<div class="grid-item">
-						<div class="popup_title">{queriedFeature.properties.sculpture_name}</div>
-						<div
-							style="position: relative; overflow: hidden; height: 37.035vh; width: auto; max-height: 37.035vh; border-style: solid; border-color:red;"
-							bind:this={imgElementLeft}
+<div class={class_side}>
+	<button class="close-btn" onclick={close_fun}>x</button>
+	{#if mdrow}
+		<div class="grid-item">
+			<div class="popup_title">{mdrow.title}</div>
+			<div class="bg-red-300" style={style_side}>
+				<Slideshow images={mdrow[images_key]} />
+			</div>
+			<div class="info">
+				{#if side == 'left'}
+					<a
+						href="#"
+						style="color:black; text-decoration: none;"
+						onclick={(ev) => {
+							ev.preventDefault();
+							showOtherPopup(popup_id, 'right');
+						}}
+					>
+						<span style="font-size: 0.8vw;"
+							>aller à l’emplacement actuel / zum aktuellen Standort</span
 						>
-							<Slideshow images={queriedFeature.properties.image} />
-						</div>
-						<div class="info">
-							{#if a}
-								<a
-									href="none"
-									style="color:black; text-decoration: none;"
-									onclick={preventDefault(showNewPopup)}
-								>
-									<span style="font-size: 0.8vw;"
-										>aller à l’emplacement actuel / zum aktuellen Standort</span
-									>
-									<span style="color: blue;">&#9654;</span>
-								</a>
-							{/if}
-							<Hr classHr="my-8" />
-							<h4>Artiste / Künstler*in:</h4>
-							<p>
-								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
-							</p>
-							<Hr classHr="my-8" />
-							<h4>Photographe / Fotograf*in:</h4>
-							<p>{queriedFeature.properties.photographer}</p>
-							<Hr classHr="my-8" />
-							<h4>Lieu / Ort:</h4>
-							<p>{queriedFeature.properties.location}</p>
-						</div>
-					</div>
+						<span style="color: blue;">&#9654;</span>
+					</a>
+				{:else if side == 'right'}
+					<a
+						href="#"
+						style="color:black; text-decoration: none;"
+						onclick={(ev) => {
+							ev.preventDefault();
+							showOtherPopup(popup_id, 'left');
+						}}
+					>
+						<span style="color: red;">&#9664;</span>
+						<span style="font-size: 0.8vw;"
+							>aller à l’emplacement d’origine / zum ursprünglichen Standort</span
+						>
+					</a>
 				{/if}
-			{/each}
-		{:else}
-			<p>Loading...</p>
-		{/if}
-	</div>
-{/if}
 
-{#if showRight}
-	<div class="right">
-		<button class="close-btn" onclick={closeR}>x</button>
-		{#if qf}
-			{#each qf as queriedFeature}
-				{#if queriedFeature.properties.period == 'new'}
-					<div class="grid-item">
-						<div class="popup_title">{queriedFeature.properties.sculpture_name}</div>
-						<div
-							style="position: relative; overflow: hidden; height: 37.035vh; width: 100%; min-height: 37.035vh; border-style: solid; border-color:blue;"
-							bind:this={imgElementLeft}
-						>
-							<Slideshow images={queriedFeature.properties.image} />
-						</div>
-						<div class="info">
-							{#if a}
-								<a
-									href="none"
-									style="color:black; text-decoration: none;"
-									onclick={preventDefault(showOldPopup)}
-								>
-									<span style="color: red;">&#9664;</span>
-									<span style="font-size: 0.8vw;"
-										>aller à l'emplacement d’origine / zum ursprünglichen Standort</span
-									>
-								</a>
-							{/if}
-							<Hr classHr="my-8" />
-							<h4>Artiste / Künstler*in:</h4>
-							<p>
-								{queriedFeature.properties.sculptor} ({queriedFeature.properties.historic_year})
-							</p>
-							<Hr classHr="my-8" />
-							<h4>Photographe / Fotograf*in:</h4>
-							<p>{queriedFeature.properties.photographer}</p>
-							<Hr classHr="my-8" />
-							<h4>Lieu / Ort:</h4>
-							<p>{queriedFeature.properties.location}</p>
-						</div>
-					</div>
-				{/if}
-			{/each}
-		{:else}
-			<p>Loading...</p>
-		{/if}
-	</div>
-{/if}
+				<Hr classHr="my-8" />
+				<h4>Artiste / Künstler*in:</h4>
+				<p>
+					{mdrow.artist} ({mdrow.expo})
+				</p>
+				<Hr classHr="my-8" />
+				<h4>Lieu / Ort:</h4>
+				<p>{mdrow.place_hist}</p>
+			</div>
+		</div>
+	{:else}
+		<p>Loading...</p>
+	{/if}
+</div>

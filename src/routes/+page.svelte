@@ -7,6 +7,9 @@
 	import 'sweetalert2/dist/sweetalert2.min.css';
 	import { base } from '$app/paths';
 
+	let { data } = $props();
+	const metadata = data.metadata;
+
 	function showPopup() {
 		// @ts-ignore
 		const swalInstance = Swal.fire({
@@ -58,7 +61,7 @@
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
 <link rel="stylesheet" href="{base}/styles.css" />
 {#if $isMapOChecked && $isMapNChecked}
-	<Map />
+	<Map {metadata} />
 {:else if $isMapOChecked && !$isMapNChecked}
 	<MapO />
 {:else if !$isMapOChecked && $isMapNChecked}

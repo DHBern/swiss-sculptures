@@ -4,7 +4,7 @@
 	import maplibregl from 'maplibre-gl';
 	import Popup from './Popup.svelte';
 	import { queryCoordinates } from '../queryGeoJSON_coordinates';
-	import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
+	// import { PUBLIC_MAPTILER_API_KEY } from '$env/static/public';
 	import { isMapOChecked, isMapNChecked } from '../store.js';
 	import { base } from '$app/paths';
 
@@ -87,7 +87,8 @@
 	onMount(async () => {
 		map = new maplibregl.Map({
 			container: 'map',
-			style: `https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
+			style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+			// style: `https://api.maptiler.com/maps/ch-swisstopo-lbm-dark/style.json?key=${PUBLIC_MAPTILER_API_KEY}`,
 			center: [7.25, 47.15], // Centered around Biel/Bienne
 			zoom: 13
 		});

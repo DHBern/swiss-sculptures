@@ -12,8 +12,8 @@
 	} = $props();
 
 
-	const idx = metadata.findIndex((m) => m.id === popup_id);
-	const mdrow = metadata[idx];
+	const idx = $derived(metadata.findIndex((m) => m.id === popup_id));
+	const mdrow = $derived(metadata[idx]);
 
 	function closeL() {
 		showLeft = false;

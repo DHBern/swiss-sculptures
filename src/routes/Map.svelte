@@ -105,7 +105,6 @@
 					layers: ['hist-points', 'today-points']
 				});
 				if (features.length > 0) {
-					const id = features[0].id;
 					popup_id = features[0].properties.id;
 
 					// Open Popups
@@ -120,13 +119,13 @@
 							break;
 					}
 					// Draw line and zoom
-					if (id !== undefined) {
+					if (popup_id !== undefined) {
 						map.once('render', () => {
-							// Turn the previous filter to none
+							// Make all lines invisible
 							map.setLayoutProperty('lines', 'visibility', 'none');
 
 							// Turn the filter at the clicked point to the opposite state
-							map.setFilter('lines', ['==', ['get', 'id'], id]);
+							map.setFilter('lines', ['==', ['get', 'id'], popup_id]);
 
 							let visibility = map.getLayoutProperty('lines', 'visibility');
 							visibility = visibility === 'none' ? 'visible' : 'none';

@@ -32,7 +32,7 @@
 			} else if (which === 'right') {
 				showRight = true;
 			}
-			// resetZoom();
+			resetZoom();
 		}
 	}
 

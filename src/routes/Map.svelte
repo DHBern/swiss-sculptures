@@ -243,7 +243,12 @@
 	function resetZoom() {
 		console.log('Resetting zoom...');
 		setTimeout(() => {
-			const bbox = [mdrow.lon_today, mdrow.lat_today, mdrow.lon_hist, mdrow.lat_hist]
+			const lon_min = Math.min(mdrow.lon_today, mdrow.lon_hist);
+			const lon_max = Math.max(mdrow.lon_today, mdrow.lon_hist);
+			const lat_min = Math.min(mdrow.lat_today, mdrow.lat_hist);
+			const lat_max = Math.max(mdrow.lat_today, mdrow.lat_hist);
+			const bbox = [lon_min, lat_min, lon_max, lat_max];
+			console.log(bbox);
 			const padding = { top: 100, bottom: 50, left: 50, right: 50 };
 			map.fitBounds(bbox, { padding, linear: false, animate: true, duration: 3000 });
 		}, 500);

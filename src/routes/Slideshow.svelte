@@ -19,7 +19,7 @@
 
 <div class="slideshow-container">
 	{#if images.length === 0}
-		<div class="slide-container active">
+		<div class="slide active">
 			<img
 				src="{base}/default-img.png"
 				alt="Sculptures"
@@ -28,12 +28,12 @@
 		</div>
 	{/if}
 	{#each images as image, index}
-			<div class="slide-container {index === currentIndex ? 'active' : ''}">
-				<img src={image.image_url} alt="Sculptures" class="slide" />
-			</div>
-				<p>
+			<div class="slide {index === currentIndex ? 'active' : ''}">
+				<img src={image.image_url} alt="Sculptures" class="slide-image" />
+				<p class="slide-text">
 					<span style="font-weight: bold;">Photographe / Fotograf*in:</span>
 					{image.image_credits}
 				</p>
+			</div>
 	{/each}
 </div>

@@ -207,7 +207,7 @@
 				}
 			};
 
-			function handleMouseLeave(e) {
+			function handleMouseLeave(e, popup) {
 				map.getCanvas().style.cursor = '';
 				hoveredPointId = null;
 				popup.remove();
@@ -215,8 +215,8 @@
 
 			map.on('mouseenter', 'today-points', (e) => {handleMouseEnter(e)});
 			map.on('mouseenter', 'hist-points', (e) => {handleMouseEnter(e)});
-			map.on('mouseleave', 'today-points', (e) => {handleMouseLeave(e)});
-			map.on('mouseleave', 'hist-points', (e) => {handleMouseLeave(e)});
+			map.on('mouseleave', 'today-points', (e) => {handleMouseLeave(e, popup)});
+			map.on('mouseleave', 'hist-points', (e) => {handleMouseLeave(e, popup)});
 
 			map.on('mouseenter', 'lines', (e) => {
 				map.getCanvas().style.cursor = 'pointer';

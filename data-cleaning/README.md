@@ -10,22 +10,23 @@ Cleaning workflow run on 2025-04-22 (also see the notes on manual changes below!
 ## Resolved Issues
 
 - renamed Lüginbühl → Luginbühl
-- converted about 9 cells from degMinSec to decimal [using this converter](https://www.fcc.gov/media/radio/dms-decimal)
+- converted coordinates in about 9 cells from degMinSec to decimal [using this converter](https://www.fcc.gov/media/radio/dms-decimal)
 - Text transform on 54 cells in column An / Jahr: value.replace("/","–")
-- One artwork has two coordinates `47.38890039002489 8.045602850675767 & 47.48801019633846 7.731032488007244`. The second coordinate was removed in the cleaning process. However, this decision should be revised
+- One artwork has two coordinates `47.38890039002489 8.045602850675767 & 47.48801019633846 7.731032488007244`. The second coordinate was removed in the cleaning process. However, this decision should be revised, since the first is in Aarau and the second in Listal.
 
 ## Unresolved Issues
 
 ### Coordinates
 
-- 2 artworks have identical coordinates for today
-- 24 artworks have identical coordinates for hist
-- While some coordinates appear to be precise, others are at random places in buildings
-- Some of the artworks that did not move between hist and today sometimes have slightlydifferent coordinates, sometimes they overlap
+- While some coordinates pretend to be very precise, others are at random places in buildings
+- Some of the artworks that did not move between hist and today sometimes have slightlydifferent coordinates, but for many others the points overlap, which can be irritating, since no line will appear.
+- Similarly...
+  - 2 artworks have identical coordinates for today (points overlap)
+  - 24 artworks have identical coordinates for hist (points overlap)
 
 ### Inconsistencies
 
-- Some credits contain `(c)`
+- Some image credits contain `(c)` others don't.
 - One exhibit seems to having been exhibited at `ESS-SPA 6, 1975 / ESS-SPA 7, 1980`. Is this true?
 
 ### Missing Information

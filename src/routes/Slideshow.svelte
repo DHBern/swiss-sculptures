@@ -23,7 +23,7 @@
 			<img
 				src="{base}/default-img.png"
 				alt="Sculptures"
-				style="max-width: 100%; max-height: 100%; object-fit: cover;"
+				class="slide-image"
 			/>
 		</div>
 	{/if}

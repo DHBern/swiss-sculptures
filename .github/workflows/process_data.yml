@@ -27,10 +27,12 @@ jobs:
           pip install pandas
 
       - name: Run convert-features.py
-        run: python data-conversion/convert-features.py
+        run: python ./convert-features.py
+        working-directory: data-conversion
 
       - name: Run convert-metadata.py
-        run: python data-conversion/convert-metadata.py
+        run: python ./convert-metadata.py
+        working-directory: data-conversion
 
       - name: Move files to /static
         run: |
@@ -41,7 +43,7 @@ jobs:
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: "GitHub Actions"
-          author_email: "actions@github.com"
-          message: "Update features.geojson and metadata.json"
+          author_name: 'GitHub Actions'
+          author_email: 'actions@github.com'
+          message: 'Update features.geojson and metadata.json'
           add: 'static/*,data-conversion/*'

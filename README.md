@@ -24,7 +24,7 @@ Before you start, ensure you have the following installed:
 - **Node.js** (v14 or later)
 - **npm** (v6 or later)
 
-## Getting Started
+## Getting Started locally
 
 Follow these steps to run the project locally:
 
@@ -39,11 +39,19 @@ Follow these steps to run the project locally:
    ```bash
    npm install
    ```
-3. **Build the project**:
+3. **convert the data**:
+   This step requires python 3 with pandas installed
    ```bash
-   npm run build
+   npm run convert_data
    ```
-4. **Run the project**:
+4. **setup .env variables**
+   create a `.env`-File (just use the template) and add a API key from maptiler
+6. **Run the project locally**:
    ```bash
-   node build
+   npm run dev
    ```
+## Updating the data
+To update the data just edit the [data.csv](https://github.com/DHBern/swiss-sculptures/blob/main/data-conversion/data.csv) and [images.csv](https://github.com/DHBern/swiss-sculptures/blob/main/data-conversion/images.csv) in `/data-conversion`.
+After a commit to the main branch, the page will automatically rebuild.
+
+   

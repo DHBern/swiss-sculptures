@@ -137,14 +137,16 @@ p {
 }
 
 .grid-item {
-	padding: 1rem;
+	padding: 1rem 1rem 0 1rem;
 	display: flex;
 	flex-direction: column;
+	max-height: calc(100% - 1rem);
 }
 
 .info h4 {
 	margin: 0;
 	font-weight: bold;
+	overflow-y: auto;
 }
 
 .close-btn {

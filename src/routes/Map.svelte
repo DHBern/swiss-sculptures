@@ -194,7 +194,9 @@
 					while (Math.abs(e.lngLat.lng - coordinatesArray[0]) > 180) {
 						coordinatesArray[0] += e.lngLat.lng > coordinatesArray[0] ? 360 : -360;
 					}
-					if(popup){popup.remove();}
+					if (popup) {
+						popup.remove();
+					}
 					popup = new maplibregl.Popup({
 						closeButton: false,
 						closeOnClick: false,
@@ -324,7 +326,7 @@
 			<label
 				><input
 					type="checkbox"
-					bind:checked={checkedShowToday}
+					bind:checked={checkedShowHist}
 					onclick={(ev) => handleInputClick(ev, 'hist')}
 				/>
 				seuls emplacements <span style="color: red;">d'origine</span> / nur
@@ -335,7 +337,7 @@
 			<label
 				><input
 					type="checkbox"
-					bind:checked={checkedShowHist}
+					bind:checked={checkedShowToday}
 					onclick={(ev) => handleInputClick(ev, 'today')}
 				/>
 				seuls emplacements <span style="color: blue;">actuels</span> / nur

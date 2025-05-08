@@ -39,11 +39,3 @@ jobs:
           mkdir -p static
           mv -f data-conversion/features.geojson static/features.geojson
           mv -f data-conversion/metadata.json static/metadata.json
-
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: 'GitHub Actions'
-          author_email: 'actions@github.com'
-          message: 'Update features.geojson and metadata.json'
-          add: 'static/*,data-conversion/*'

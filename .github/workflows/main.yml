@@ -18,16 +18,16 @@ jobs:
           node-version: 23
           cache: npm
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
       - name: Install dependencies
         run: |
           npm install 
           python -m pip install --upgrade pip
           pip install pandas
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
 
       - name: Run convert-features.py
         run: python ./convert-features.py

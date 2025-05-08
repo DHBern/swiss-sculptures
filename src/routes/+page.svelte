@@ -45,7 +45,7 @@
 					Zeidan (DH), Nicolas Gränacher (IKG), Dr. Yvonne Schweizer (IKG)
 				</i><br>
 				<div class="logo-container">
-					<img src="${base}/logo.jpg" class="logo"><img src="${base}unibe_logo.png" class="logo"><img src="${base}SNF_logo_standard_web_color_pos_e.png" class="logo">
+					<img src="${base}/logo.jpg" class="logo"><img src="${base}/unibe_logo.png" class="logo"><img src="${base}/SNF_logo_standard_web_color_pos_e.png" class="logo">
 				</div>
 			`,
 			width: '50%',

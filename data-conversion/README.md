@@ -3,8 +3,7 @@
 - Add information on the artwork to `data.csv`
 - Add information on the images (url and credits) to `images.csv`
 - Make sure that the data shares the same unique `id`
-  - Currently, this is a string containing the name of the artwork and the ess-spa-year. But it can be anything.
-  - Avoid special characters and whitespaces
+  - Currently, this is a string containing the name of the artwork and the ess-spa-year. Avoid special characters and whitespaces
 
 # Step 2: Create features.geojson
 

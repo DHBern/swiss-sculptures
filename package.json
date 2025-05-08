@@ -3,6 +3,8 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"install_pydeps": "pip install pandas",
+		"convert_data": "cd data-conversion && python3 ./convert-features.py && python3 ./convert-metadata.py && mv -f ./metadata.json ../static/metadata.json && mv -f ./features.geojson ../static/features.geojson",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",

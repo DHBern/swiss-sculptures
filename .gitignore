@@ -29,3 +29,7 @@ pnpm-debug.log*
 # Vite timestamp files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Static
+static/*.json
+static/*.geojson

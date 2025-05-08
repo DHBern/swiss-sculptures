@@ -19,7 +19,29 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install 
+          python -m pip install --upgrade pip
+          pip install pandas
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Run convert-features.py
+        run: python ./convert-features.py
+        working-directory: data-conversion
+
+      - name: Run convert-metadata.py
+        run: python ./convert-metadata.py
+        working-directory: data-conversion
+
+      - name: Move files to /static
+        run: |
+          mkdir -p static
+          mv -f data-conversion/features.geojson static/features.geojson
+          mv -f data-conversion/metadata.json static/metadata.json
 
       - name: build
         env:

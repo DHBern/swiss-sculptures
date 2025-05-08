@@ -11,7 +11,6 @@
 		resetZoom
 	} = $props();
 
-
 	const idx = $derived(metadata.findIndex((m) => m.id === popup_id));
 	const mdrow = $derived(metadata[idx]);
 
@@ -36,10 +35,10 @@
 		}
 	}
 
-	let class_side = '';
-	let style_side = '';
-	let close_fun;
-	let images_key = '';
+	let class_side = $state('');
+	let style_side = $state('');
+	let close_fun = $state();
+	let images_key = $state('');
 	switch (side) {
 		case 'left':
 			class_side = 'left';
@@ -68,8 +67,7 @@
 			</div>
 			<div class="info">
 				{#if side == 'left'}
-					<a
-						href="#"
+					<button
 						style="color:black; text-decoration: none;"
 						onclick={(ev) => {
 							ev.preventDefault();
@@ -80,10 +78,9 @@
 							>aller à l’emplacement actuel / zum aktuellen Standort</span
 						>
 						<span style="color: blue;">&#9654;</span>
-					</a>
+					</button>
 				{:else if side == 'right'}
-					<a
-						href="#"
+					<button
 						style="color:black; text-decoration: none;"
 						onclick={(ev) => {
 							ev.preventDefault();
@@ -94,7 +91,7 @@
 						<span style="font-size: 0.8vw;"
 							>aller à l’emplacement d’origine / zum ursprünglichen Standort</span
 						>
-					</a>
+					</button>
 				{/if}
 
 				<Hr classHr="my-8" />

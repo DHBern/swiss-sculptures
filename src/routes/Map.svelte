@@ -307,13 +307,6 @@
 					}
 				}
 			}
-
-			// Update based on the checkbox being clicked
-			if (checkboxName === 'hist') {
-				checkedShowToday = isCurrentlyChecked ? true : false;
-			} else if (checkboxName === 'today') {
-				checkedShowHist = isCurrentlyChecked ? true : false;
-			}
 		}
 	}
 </script>

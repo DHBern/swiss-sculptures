@@ -161,7 +161,7 @@
 				}
 			});
 
-			function handleMouseEnter(e, popup) {
+			function handleMouseEnter(e, popup, today_hist) {
 				map.getCanvas().style.cursor = 'pointer';
 				if (e.features && e.features.length) {
 					const coordinates = e.lngLat;
@@ -171,7 +171,9 @@
 					const coordinatesArray = [coordinates.lng, coordinates.lat];
 					const id = e.features[0].properties.id;
 					const idx = metadata.findIndex((m) => m.id === id);
-					let image = metadata[idx].images_hist[0].image_url;
+					let image = today_hist == 'hist' ?
+					metadata[idx].images_hist[0].image_url :
+					metadata[idx].images_today[0].image_url;
 					image = image.replace(/\/large\//g, '/medium/');
 					const name = metadata[idx].title;
 					// Create the popup HTML content
@@ -220,10 +222,10 @@
 			}
 
 			map.on('mouseenter', 'today-points', (e) => {
-				popup = handleMouseEnter(e, popup);
+				popup = handleMouseEnter(e, popup, 'today');
 			});
 			map.on('mouseenter', 'hist-points', (e) => {
-				popup = handleMouseEnter(e, popup);
+				popup = handleMouseEnter(e, popup, 'hist');
 			});
 			map.on('mouseleave', 'today-points', (e) => {
 				popup = handleMouseLeave(e, popup);

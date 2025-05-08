@@ -283,32 +283,6 @@
 			map.setLayoutProperty('today-points', 'visibility', checkedShowToday ? 'visible' : 'none');
 		}
 	});
-
-	// Handle checkbox state changes
-	function handleInputClick(ev, checkboxName) {
-		// Ensure that ev.target is an HTMLInputElement
-		const target = ev.target;
-		if (target instanceof HTMLInputElement) {
-			const isCurrentlyChecked = target.checked;
-
-			// Prevent unchecking if it's the only checkbox checked
-			if (!isCurrentlyChecked) {
-				if (checkboxName === 'hist') {
-					// If hist is being unchecked, ensure today is checked
-					if (!checkedShowHist) {
-						ev.preventDefault(); // Prevent the checkbox from being unchecked
-						return;
-					}
-				} else if (checkboxName === 'today') {
-					// If today is being unchecked, ensure hist is checked
-					if (!checkedShowToday) {
-						ev.preventDefault(); // Prevent the checkbox from being unchecked
-						return;
-					}
-				}
-			}
-		}
-	}
 </script>
 
 <div id="map-container" style="width: {mapWidth}; left: {mapLeft};">
@@ -317,22 +291,14 @@
 			style="position: absolute; z-index:10; color:black; top:3vh; left:1vw; background-color: #d9d9d9;"
 		>
 			<label
-				><input
-					type="checkbox"
-					bind:checked={checkedShowHist}
-					onclick={(ev) => handleInputClick(ev, 'hist')}
-				/>
+				><input type="checkbox" bind:checked={checkedShowHist} />
 				seuls emplacements <span style="color: red;">d'origine</span> / nur
 				<span style="color: red;">ursprüngliche</span> Standorte</label
 			>
 
 			<br />
 			<label
-				><input
-					type="checkbox"
-					bind:checked={checkedShowToday}
-					onclick={(ev) => handleInputClick(ev, 'today')}
-				/>
+				><input type="checkbox" bind:checked={checkedShowToday} />
 				seuls emplacements <span style="color: blue;">actuels</span> / nur
 				<span style="color: blue;">aktuelle</span> Standorte</label
 			>

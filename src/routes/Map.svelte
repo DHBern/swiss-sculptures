@@ -212,7 +212,9 @@
 			function handleMouseLeave(e, popup) {
 				map.getCanvas().style.cursor = '';
 				hoveredPointId = null;
-				popup.remove();
+				if (popup) {
+					popup.remove();
+				}
 				popup = null;
 				return popup;
 			}

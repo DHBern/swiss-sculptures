@@ -5,7 +5,7 @@
 	"scripts": {
 		"install_pydeps": "pip install pandas",
 		"convert_data": "cd data-conversion && python3 ./convert-features.py && python3 ./convert-metadata.py && mv -f ./metadata.json ../static/metadata.json && mv -f ./features.geojson ../static/features.geojson",
-		"dev": "vite dev",
+		"dev": "npm run convert_data && vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",

@@ -101,7 +101,7 @@
 				</p>
 				<Hr classHr="my-8" />
 				<h4>Lieu / Ort:</h4>
-				<p>{mdrow.place_hist}</p>
+				<p>{side=='left' ? mdrow.place_hist : mdrow.place_today}</p>
 			</div>
 		</div>
 	{:else}

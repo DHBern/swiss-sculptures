@@ -141,12 +141,13 @@ p {
 	display: flex;
 	flex-direction: column;
 	max-height: calc(100% - 1rem);
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 .info h4 {
 	margin: 0;
 	font-weight: bold;
-	overflow-y: auto;
 }
 
 .close-btn {

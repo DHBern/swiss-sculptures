@@ -55,8 +55,6 @@
 	}
 </script>
 
-<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.4.1/dist/maplibre-gl.css" />
-<link rel="stylesheet" href="{base}/styles.css" />
 <Map {metadata} />
 
 <!-- Footer/Legend -->
@@ -66,21 +64,23 @@
 		<h1>
 			Exposition suisse de sculpture interactive / Schweizerische Plastikausstellung interaktiv
 		</h1>
+	</div>
+	<div class="p">
 		<h3>
 			Cliquez sur les points et les lignes pour voir plus de détails. / Für mehr Details klicken Sie
 			auf die Punkte und Linien.
 		</h3>
-	</div>
-	<div class="p" style="display:grid;">
-		<div class="line-container">
-			<div><img src="{base}/red.svg" alt="red" class="svg" /></div>
-			<div>
-				<p class="l-text">emplacement d’origine (rouge) / ursprünglicher Standort (rot)</p>
+		<div class="line-upper-container">
+			<div class="line-container">
+				<div><img src="{base}/red.svg" alt="red" class="svg" /></div>
+				<div>
+					<p class="l-text">emplacement d’origine (rouge) / ursprünglicher Standort (rot)</p>
+				</div>
 			</div>
-		</div>
-		<div class="line-container">
-			<div><img src="{base}/blue.svg" alt="blue" class="svg" /></div>
-			<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
+			<div class="line-container">
+				<div><img src="{base}/blue.svg" alt="blue" class="svg" /></div>
+				<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
+			</div>
 		</div>
 		<button
 			style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
@@ -90,3 +90,16 @@
 		</button>
 	</div>
 </div>
+
+<style>
+	.line-upper-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	h3 {
+		margin: 0 0 1rem 0;
+	}
+	.l-text {
+		margin: 0;
+	}
+</style>

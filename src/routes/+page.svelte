@@ -59,7 +59,7 @@
 
 <!-- Footer/Legend -->
 
-<div class="grid-container">
+<div class="grid-container" style="overflow-y: auto;">
 	<div class="col-auto p">
 		<h1>
 			Exposition suisse de sculpture interactive / Schweizerische Plastikausstellung interaktiv
@@ -82,14 +82,14 @@
 				<div><p class="l-text">emplacement actuel (bleu) / aktueller Standort (blau)</p></div>
 			</div>
 		</div>
-		<button
-			style="position: absolute; z-index:10; color:black; bottom:1vh; right:0.25vw; background-color: transparent; border: none;"
-			onclick={showPopup}
-		>
-			<img src="{base}/info.svg" alt="info" />
-		</button>
 	</div>
 </div>
+<button
+	style="position: fixed; z-index:10; color:black; bottom: 10px; right:10px; background-color: transparent; border: none;"
+	onclick={showPopup}
+>
+	<img src="{base}/info.svg" alt="info" />
+</button>
 
 <style>
 	.line-upper-container {

@@ -65,32 +65,40 @@
 			<div class="bg-red-300" style={style_side}>
 				<Slideshow images={mdrow[images_key]} />
 			</div>
-			<div class="info">
+			<div class="info" style="overflow-y: auto;">
 				{#if side == 'left'}
 					<button
-						style="color:black; text-decoration: none;"
+						style="display: block; color:black; text-decoration: none; margin-top: 5px; margin-left: auto; margin-right: auto;"
 						onclick={(ev) => {
 							ev.preventDefault();
 							showOtherPopup(popup_id, 'right');
 						}}
 					>
-						<span style="font-size: 0.8vw;"
-							>aller à l’emplacement actuel / zum aktuellen Standort</span
-						>
-						<span style="color: blue;">&#9654;</span>
+						<div style="display:flex; flex-gap: 5px; justify-content: center; align-items: center;">
+							<p style="text-align: left; font-size: 0.8vw;">
+								Aller à l’emplacement actuel
+								<br />
+								Zum aktuellen Standort
+							</p>
+							<p style="color: blue; font-size: 20px; border-radius: 100%;">&#9654;</p>
+						</div>
 					</button>
 				{:else if side == 'right'}
 					<button
-						style="color:black; text-decoration: none;"
+						style="display: block; color:black; text-decoration: none; margin-top: 5px; margin-left: auto; margin-right: auto;"
 						onclick={(ev) => {
 							ev.preventDefault();
 							showOtherPopup(popup_id, 'left');
 						}}
 					>
-						<span style="color: red;">&#9664;</span>
-						<span style="font-size: 0.8vw;"
-							>aller à l’emplacement d’origine / zum ursprünglichen Standort</span
-						>
+						<div style="display:flex; flex-gap: 5px; justify-content: center; align-items: center;">
+							<p style="color: red; font-size: 20px; border-radius: 100%;">&#9664;</p>
+							<p style="text-align: left; font-size: 0.8vw;">
+								Aller à l’emplacement d'origine
+								<br />
+								Zum ursprünglichen Standort
+							</p>
+						</div>
 					</button>
 				{/if}
 
@@ -101,7 +109,7 @@
 				</p>
 				<Hr classHr="my-8" />
 				<h4>Lieu / Ort:</h4>
-				<p>{side=='left' ? mdrow.place_hist : mdrow.place_today}</p>
+				<p>{side == 'left' ? mdrow.place_hist : mdrow.place_today}</p>
 			</div>
 		</div>
 	{:else}

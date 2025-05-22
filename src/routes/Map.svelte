@@ -292,7 +292,7 @@
 <div id="map-container" style="width: {mapWidth}; left: {mapLeft};">
 	<div id="map">
 		<div
-			style="position: absolute; z-index:10; color:black; top:3vh; left:1vw; background-color: #d9d9d9;"
+			style="position: absolute; z-index:10; color:black; top:3vh; left:1vw; padding: 5px; background-color: #d9d9d9;"
 		>
 			<label
 				><input type="checkbox" bind:checked={checkedShowHist} />

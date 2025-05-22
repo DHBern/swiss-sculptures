@@ -30,8 +30,8 @@
 	{#each images as image, index}
 			<div class="slide {index === currentIndex ? 'active' : ''}">
 				<img src={image.image_url} alt="Sculptures" class="slide-image" />
-				<p class="slide-text">
-					<span style="font-weight: bold;">Photographe / Fotograf*in:</span>
+				<p style="font-size: 7pt; text-align: center;">
+					<span style="font-weight: bold;">Photo:</span>
 					{image.image_credits}
 				</p>
 			</div>

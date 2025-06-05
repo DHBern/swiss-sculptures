@@ -20,9 +20,9 @@
 					photographique révèle la postérité de cette série d'expositions.
 					La carte de la sculpture suisse continuera de s'enrichir à l'avenir, et vous pouvez y
 					contribuer. Veuillez soumettre vos photographies et souvenirs sur publics-arts.ch.
-					Pour l'installation interactive, des données de crowdsourcing du site publics-arts.ch ont
+					Pour la carte interactive, des données de crowdsourcing du site publics-arts.ch ont
 					été rassemblées. Les numérisations proviennent de collections privées, de Wikimedia
-					Commons et d'archives publiques. Le site web et l'installation ont été réalisés en
+					Commons et d'archives publiques. Le site web et la carte ont été réalisés en
 					coopération entre l'Institut d'histoire de l'art et les Humanités numériques de
 					l'Université de Berne, avec le soutien de la Commission de digitalisation de l'Université
 					de Berne.
@@ -34,9 +34,9 @@
 					Ausstellungsreihe.
 					Die Landkarte zur Schweizer Skulptur wird in Zukunft weiterwachsen. Sie können dazu
 					beitragen: Bitte reichen Sie Ihre Fotografien und Erinnerungen ein unter publics-arts.ch.
-					Für die interaktive Installation sind Crowdsourcing-Daten der Webseite publics-arts.ch
+					Für die interaktive Karte sind Crowdsourcing-Daten der Webseite publics-arts.ch
 					aufbereitet. Die Digitalisate stammen aus Privatnachlässen, aus Wikimedia Commons
-					und aus öffentlichen Archiven. Website und Installation wurden als Kooperation
+					und aus öffentlichen Archiven. Website und Karte wurden als Kooperation
 					zwischen dem Institut für Kunstgeschichte und den Digital Humanities der Universität
 					Bern realisiert. Gefördert von der Digitalisierungskommission der Universität Bern.
 				</p> <br>

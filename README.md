@@ -42,12 +42,16 @@ Follow these steps to run the project locally:
    ```
 4. **setup .env variables**
    create a `.env`-File (just use the template) and add a API key from maptiler
-6. **Run the project locally**:
+5. **Run the project locally**:
    ```bash
    npm run dev
    ```
+
 ## Updating the data
+
 To update the data just edit the [data.csv](https://github.com/DHBern/swiss-sculptures/blob/main/data-conversion/data.csv) and [images.csv](https://github.com/DHBern/swiss-sculptures/blob/main/data-conversion/images.csv) in `/data-conversion`.
 After a commit to the main branch, the page will automatically rebuild.
 
-   
+## Credits
+
+This project is tested with BrowserStack.
